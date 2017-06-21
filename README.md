@@ -1,4 +1,4 @@
 # spectral.ptf
 ===========
 
-The parametric version of the Google Spectral by Production Type built in Prototypo
+The parametric version of Google Fonts' Spectral, by Production Type, built in Prototypo
