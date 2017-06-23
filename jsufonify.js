@@ -122,9 +122,11 @@ function jsufonify(/*prefixText*/) {
 				return;
 			}
 
+			// we first try to get the base from name (to differenciate alternates) otherwise we look in the unicode map
+			var base = font.glyphs[_glyph.base] || charMap[_glyph.base.charCodeAt(0)]
 			// we'll save the diacritics sourcs, replace it with the base glyph
 			// source and then restore/merge the properties we're interested in
-			var glyph = _.clone( charMap[ _glyph.base.charCodeAt(0) ], true );
+			var glyph = _.clone(base, true);
 
 			glyph.name = _glyph.name;
 			glyph.unicode = _glyph.unicode;

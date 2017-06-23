@@ -18,8 +18,8 @@ exports.glyphs['a_alt'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[2].expandedTo[1].x + thickness + 90 + (20)
-			y: xHeight
+			x: contours[0].nodes[2].expandedTo[1].x - thickness - 90 + (20)
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
