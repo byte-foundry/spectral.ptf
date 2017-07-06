@@ -34,11 +34,8 @@ exports.glyphs['S'] =
 						0
 					)
 					dirOut: Math.min(
-						Math.min(
-							contours[0].nodes[0].expand.angle - Math.PI / 2,
-							Utils.lineAngle( contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[0].point )
-						) + ( 10 / 180 * Math.PI ) * aperture * apertureTop,
-						- Math.PI / 2 + ( 5 / 180 * Math.PI )
+						Utils.lineAngle( contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[0].point ),
+						Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ) - ( 12 / 180 * Math.PI )
 					)
 					expand: Object({
 						width: ( 75 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
@@ -88,8 +85,8 @@ exports.glyphs['S'] =
 					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[4].expandedTo[1].x ) * ( 140 / 290 )
 					y: contours[0].nodes[2].expandedTo[0].y + ( contours[0].nodes[4].expandedTo[1].y - contours[0].nodes[2].expandedTo[0].y ) * ( 105 / 200 ) * crossbar
 					dirOut: Math.min(
-						Math.PI,
-						Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[1].point ) + ( 18 / 180 * Math.PI )
+						Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[1].point ) + ( ( 15 * width + ( 15 - ( 15 / 80 ) * thickness ) ) / 180 * Math.PI ),
+						Math.PI
 					)
 					type: 'smooth'
 					tensionIn: 1.1
@@ -139,12 +136,9 @@ exports.glyphs['S'] =
 						),
 						capHeight
 					)
-					dirIn: Math.max(
-						Math.min(
-							contours[0].nodes[6].expand.angle + Math.PI / 2,
-							Utils.lineAngle( contours[0].nodes[6].expandedTo[0].point, contours[0].nodes[5].expandedTo[1].point )
-						) - ( 10 / 180 * Math.PI ) * aperture * apertureTop,
-						Math.PI / 2 - ( 5 / 180 * Math.PI )
+					dirIn: Math.min(
+						Utils.lineAngle( contours[0].nodes[6].expandedTo[0].point, contours[0].nodes[5].expandedTo[1].point ),
+						Utils.lineAngle( contours[0].nodes[6].expandedTo[1].point, contours[0].nodes[5].expandedTo[1].point ) - ( 20 / 180 * Math.PI )
 					)
 					expand: Object({
 						width: ( 70 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
