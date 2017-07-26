@@ -15,6 +15,14 @@ exports.glyphs['M'] =
 		'latin',
 		'uppercase'
 	]
+	anchors:
+		0:
+			intersection: Utils.lineLineIntersection(
+				contours[1].nodes[0].expandedTo[0].point,
+				contours[1].nodes[0].expandedTo[1].point,
+				contours[3].nodes[0].expandedTo[0].point,
+				contours[3].nodes[0].expandedTo[1].point
+			)
 	contours:
 		0:
 			skeleton: true
@@ -106,22 +114,19 @@ exports.glyphs['M'] =
 		4:
 			skeleton: false
 			closed: true
+			# exportReversed: true
 			nodes:
 				0:
-					x: contours[3].nodes[0].expandedTo[1].x
-					y: contours[3].nodes[0].expandedTo[1].y
-					typeOut: 'line'
-				1:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[1].nodes[0].expandedTo[0].y
 					typeOut: 'line'
-				2:
-					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].expandedTo[1].y
+				1:
+					x: contours[3].nodes[0].expandedTo[1].x
+					y: contours[3].nodes[0].expandedTo[1].y
 					typeOut: 'line'
-				3:
-					x: contours[3].nodes[0].expandedTo[0].x
-					y: contours[3].nodes[0].expandedTo[0].y
+				2:
+					x: anchors[0].intersection[0]
+					y: anchors[0].intersection[1]
 					typeOut: 'line'
 	components:
 		0:
