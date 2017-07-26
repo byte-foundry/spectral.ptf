@@ -19,6 +19,9 @@ exports.glyphs['s'] =
 		0:
 			x: contours[0].nodes[5].expandedTo[0].x
 			y: xHeight + diacriticHeight
+		1:
+			x: contours[0].nodes[1].expandedTo[0].x
+			y: contours[0].nodes[1].expandedTo[0].y + ( 4 / 80 ) * thickness * contrast
 	contours:
 		0:
 			skeleton: true
