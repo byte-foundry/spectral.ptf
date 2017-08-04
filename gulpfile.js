@@ -23,6 +23,15 @@ gulp.task('build', ['copy'], function() {
 		.pipe(gulp.dest('dist/'));
 });
 
+gulp.task('build:free', ['copy'], function() {
+	return gulp.src('src/**/*.coffee')
+		.pipe($.coffee({bare: true}).on('error', $.util.log))
+		.pipe(operation())
+		.pipe($.concat('font_free.json'))
+		.pipe(jsufon(true))
+		.pipe(gulp.dest('dist/'));
+});
+
 gulp.task('copy', ['clean-dist'], function() {
 	return gulp.src('src/**/*.js')
 		.pipe(gulp.dest('dist'));

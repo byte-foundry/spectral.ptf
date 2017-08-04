@@ -27,8 +27,23 @@ function addComponents( glyph ) {
 	});
 }
 
+function linkToRelatedGlyphs(glyph, glyphsByName) {
+	var base = glyphsByName[glyph.base];
+
+	base.relatedGlyphs = base.relatedGlyphs || [];
+	glyph.relatedGlyphs = glyph.relatedGlyphs || [];
+
+	base.relatedGlyphs.forEach(function(name) {
+		glyphsByName[name].relatedGlyphs = glyphsByName[name].relatedGlyphs || [];
+		glyphsByName[name].relatedGlyphs.push(glyph.name);
+	});
+	glyph.relatedGlyphs = glyph.relatedGlyphs.concat(base.name, base.relatedGlyphs);
+
+	base.relatedGlyphs.push(glyph.name);
+}
+
 // plugin level function (dealing with files)
-function jsufonify(/*prefixText*/) {
+function jsufonify(/*prefixText*/free) {
 
 	// creating a stream through which each file will pass
 	var stream = through.obj(function(file, enc, cb) {
@@ -41,8 +56,33 @@ function jsufonify(/*prefixText*/) {
 
 		var charMap = {};
 
+		if (free) {
+			font.glyphs = _.mapValues(font.glyphs, (glyph) => {
+				if (glyph.unicode === undefined) {
+					return glyph;
+				}
+				else {
+					if (typeof glyph.unicode === 'number') {
+						return (glyph.unicode >=65 && glyph.unicode <= 90) ||
+							(glyph.unicode >= 87 && glyph.unicode <= 122) ? glyph : undefined;
+					}
+					else {
+						return (glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
+							(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
+					}
+				}
+				return glyph.unicode === undefined ||
+					(glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
+					(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
+			});
+		}
+
 		// WIP: convert ptf object to jsufon
 		_.forEach(font.glyphs, function( glyph, name ) {
+			if (glyph === undefined) {
+				delete font.glyphs[name];
+				return;
+			}
 			glyph.name = name;
 
 			if ( glyph.name.length === 1 ) {
@@ -129,6 +169,7 @@ function jsufonify(/*prefixText*/) {
 			var glyph = _.clone(base, true);
 
 			glyph.name = _glyph.name;
+			glyph.base = base.name;
 			glyph.unicode = _glyph.unicode;
 			glyph.tags = _glyph.tags;
 			glyph.glyphName = _glyph.glyphName;
@@ -140,6 +181,14 @@ function jsufonify(/*prefixText*/) {
 
 			font.glyphs[_glyph.name] = glyph;
 		});
+
+		_.forEach(font.glyphs, function(glyph) {
+			if(glyph.base === undefined) {
+				return;
+			}
+
+			linkToRelatedGlyphs(glyph, font.glyphs);
+		})
 
 		file.contents = new Buffer( JSON.stringify( sandbox.exports ) );
 
@@ -154,3 +203,4 @@ function jsufonify(/*prefixText*/) {
 
 // exporting the plugin main function
 module.exports = jsufonify;
+
