@@ -24,21 +24,19 @@ exports.glyphs['five'] =
 					x: spacingLeft + 8 + (10)
 					y: 36 + (8)
 					dirOut: - 55 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 86 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 40 + 'deg'
 						distr: 0.15
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 130 / 390 )
 					y: - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 64 / 80 ) * thickness * opticThickness * contrast
 						angle: 50 / 180 * Math.PI
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 190 + 200 * width - (16),
@@ -47,30 +45,27 @@ exports.glyphs['five'] =
 					y: - overshoot + (( 64 / 80 ) * thickness * opticThickness * Math.sin( 50 )) +  ( (( 433 / 660 ) * capHeight * crossbar - (39) + (( 80 / 80 ) * thickness * opticThickness * contrast) / 2 ) - overshoot + (( 64 / 80 ) * thickness * opticThickness * Math.sin( 50 )) ) * ( 195 / 315 )
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 82 / 80 ) * thickness * opticThickness
 						angle: - 150 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[1].x - (6/80) * thickness
 					y: ( 433 / 660 ) * capHeight * crossbar - (39)
 					dirIn: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 80 / 80 ) * thickness * opticThickness * contrast
 						angle: - 100 + 'deg'
 						distr: 0.5
-					})
 				4:
 					x: contours[0].nodes[0].x + (13)
 					y: contours[0].nodes[3].expandedTo[1].y - 10
-					dirIn: Utils.lineAngle( contours[0].nodes[3].expandedTo[1].point, contours[0].nodes[4].expandedTo[1].point ) + ( 10 / 180 ) * Math.PI
-					expand: Object({
+					dirIn: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}, {x: contours[0].nodes[4].expandedTo[1].x, y: contours[0].nodes[4].expandedTo[1].y}) + (10 / 180) * Math.PI
+					expand:
 						width: ( 95 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: ( 180 + 62 ) / 180 * Math.PI
 						distr: 1
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -79,20 +74,18 @@ exports.glyphs['five'] =
 					x: contours[0].nodes[4].expandedTo[1].x
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 48 / 80 ) * thickness * opticThickness * contrast
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[4].expandedTo[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: (( 48 / 80 ) * thickness * opticThickness * contrast) / Math.sin( contours[0].nodes[4].expand.angle - Math.PI - Math.PI / 2 - ( 10 / 180 * Math.PI ) )
-						angle: Utils.lineAngle( contours[0].nodes[4].expandedTo[1].point, contours[0].nodes[4].expandedTo[0].point ) - Math.PI -  ( 10 / 180 * Math.PI )
+						angle: Utils.lineAngle({x: contours[0].nodes[4].expandedTo[1].x, y: contours[0].nodes[4].expandedTo[1].y}, {x: contours[0].nodes[4].expandedTo[0].x, y: contours[0].nodes[4].expandedTo[0].y}) - Math.PI -  (10 / 180 * Math.PI)
 						distr: 0
-					})
 		2:
 			skeleton: true
 			closed: false
@@ -101,20 +94,18 @@ exports.glyphs['five'] =
 					x: contours[0].nodes[2].expandedTo[0].x - 50
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 77 / 80 ) * thickness * opticThickness
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[1].nodes[0].expandedTo[0].x ) * 0.5
 					y: contours[2].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 77 / 80 ) * thickness * opticThickness
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 		3:
 			skeleton: false
 			closed: true
@@ -122,7 +113,7 @@ exports.glyphs['five'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].expandedTo[0].y
-					dirOut: Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[0].expandedTo[1].point ) + Math.PI / 2
+					dirOut: Utils.lineAngle({x: contours[0].nodes[0].expandedTo[0].x, y: contours[0].nodes[0].expandedTo[0].y}, {x: contours[0].nodes[0].expandedTo[1].x, y: contours[0].nodes[0].expandedTo[1].y}) + Math.PI / 2
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x - ( 8 / 80 ) * thickness * opticThickness
 					y: contours[0].nodes[0].expandedTo[0].y + ( contours[0].nodes[0].expandedTo[1].y - contours[0].nodes[0].expandedTo[0].y ) * ( 20 / 57 )
@@ -151,12 +142,12 @@ exports.glyphs['five'] =
 			id: 'bottomrighttop'
 			parentAnchors:
 				0:
-					base: contours[2].nodes[0].expandedTo[0].point
-					noneAnchor: contours[2].nodes[0].expandedTo[0].point
-					opposite: contours[2].nodes[0].expandedTo[1].point
+					base: contours[2].nodes[0].expandedTo[0]
+					noneAnchor: contours[2].nodes[0].expandedTo[0]
+					opposite: contours[2].nodes[0].expandedTo[1]
 					reversed: true
 					rotate: - 10 * serifRotate
-			transformOrigin: contours[2].nodes[0].expandedTo[0].point
+			transformOrigin: contours[2].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ],
 				[ 'translateX', - ( Math.tan( ( - 10 * serifRotate ) / 180 * Math.PI ) * ( ( 77 / 80 ) * thickness * opticThickness * 0.5 ) ) ]
@@ -166,11 +157,11 @@ exports.glyphs['five'] =
 			id: 'bottomrightbottom'
 			parentAnchors:
 				0:
-					base: contours[2].nodes[0].expandedTo[1].point
-					noneAnchor: contours[2].nodes[0].expandedTo[1].point
-					opposite: contours[2].nodes[0].expandedTo[0].point
+					base: contours[2].nodes[0].expandedTo[1]
+					noneAnchor: contours[2].nodes[0].expandedTo[1]
+					opposite: contours[2].nodes[0].expandedTo[0]
 					rotate: 10 * serifRotate
-			transformOrigin: contours[2].nodes[0].expandedTo[0].point
+			transformOrigin: contours[2].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'translateX', ( Math.tan( ( 10 * serifRotate ) / 180 * Math.PI ) * ( ( 77 / 80 ) * thickness * opticThickness * 0.5 ) ) ]
 			)

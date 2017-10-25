@@ -25,26 +25,24 @@ exports.glyphs['guilsinglleft'] =
 					)
 					y: xHeight - ( 25 / 450 ) * xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: spacingLeft + (25/100) * thickness
 					y: contours[0].nodes[2].y + ( contours[0].nodes[0].y - contours[0].nodes[2].y ) * 0.5
 					typeOut: 'line'
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 100 / 80 ) * thickness * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: ( 70 / 450 ) * xHeight
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
-					})

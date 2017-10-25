@@ -14,23 +14,23 @@ exports.glyphs['dieresis'] =
 			base: 'dotaccent'
 			parentAnchors:
 				0:
-					x: anchors[0].x - ( 100 / 2 ) - Math.max(
+					x: parentAnchors[0].x - ( 100 / 2 ) - Math.max(
 						40,
 						Math.min(
 							160,
 							thickness
 						)
 					) / 2
-					y: anchors[0].y
+					y: parentAnchors[0].y
 		1:
 			base: 'dotaccent'
 			parentAnchors:
 				0:
-					x: anchors[0].x + ( 100 / 2 ) + Math.max(
+					x: parentAnchors[0].x + ( 100 / 2 ) + Math.max(
 						40,
 						Math.min(
 							160,
 							thickness
 						)
 					) / 2
-					y: anchors[0].y
+					y: parentAnchors[0].y

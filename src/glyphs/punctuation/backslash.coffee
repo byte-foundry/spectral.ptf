@@ -24,17 +24,15 @@ exports.glyphs['backslash'] =
 					x: contours[0].nodes[1].expandedTo[1].x + 150
 					y: ( 120 / 250 ) * descender
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: spacingLeft
 					y: capHeight + 90
-					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})

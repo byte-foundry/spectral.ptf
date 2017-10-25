@@ -2,7 +2,7 @@ exports.glyphs['P_sc'] =
 	unicode: 'ᴘ'
 	glyphName: 'psmall'
 	characterName: 'LATIN LETTER SMALL CAPITAL P'
-	base: 'P'
+	base: 'P_cap'
 	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']

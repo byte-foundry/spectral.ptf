@@ -22,26 +22,24 @@ exports.glyphs['grave'] =
 					x: anchors[0].x + (3)
 					y: anchors[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 12 / 80 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x
 					y: contours[0].nodes[2].expandedTo[0].y
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'line'
+					typeOut: 'smooth'
+					expand:
 						width: ( 80 / 80 ) * thickness
 						angle: - 180 + Math.max( 50 * contrast, 0 ) + 'deg'
 						distr: 0
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x - 87 * width
 					y: contours[0].nodes[0].expandedTo[0].y + 177
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 80 / 80 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0
-					})

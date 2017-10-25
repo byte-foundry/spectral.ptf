@@ -25,29 +25,26 @@ exports.glyphs['j'] =
 					y: ( 230 / 250 ) * descender
 					dirOut: 32 + 'deg'
 					tensionOut: 1.4
-					expand: Object({
+					expand:
 						width: ( 18 / 80 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: spacingLeft + (40/80) * thickness
 					y: 0 - (6)
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 80.6 / 80 ) * thickness
 						angle: 8 + 'deg'
 						distr: 0.5
-					})
 				2:
 					x: contours[0].nodes[1].x
 					y: xHeight + overshoot - Math.max( 0, serifHeight * serifArc ) - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) )
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 
 	components:
 		0:
@@ -55,17 +52,17 @@ exports.glyphs['j'] =
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[2].expandedTo[0].point
-					noneAnchor: contours[0].nodes[2].expandedTo[0].point
-					opposite: contours[0].nodes[2].expandedTo[1].point
+					base: contours[0].nodes[2].expandedTo[0]
+					noneAnchor: contours[0].nodes[2].expandedTo[0]
+					opposite: contours[0].nodes[2].expandedTo[1]
 					reversed: true
 					rotate: -15 * spurHeight
-			transformOrigin: contours[0].nodes[2].expandedTo[0].point
+			transformOrigin: contours[0].nodes[2].expandedTo[0]
 			transforms: Array(
-				[ 'scaleY', -1 ],
 				[ 'translateY', - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) ) ]
+				[ 'scaleY', -1 ],
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min( ( 85 / 50 ) * serifHeight, serifHeight + 35 )
 				serifMedian: Math.max( ( 0.20 ) * serifMedian, serifMedian - 0.8 )
 		1:

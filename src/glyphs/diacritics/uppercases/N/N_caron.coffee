@@ -2,7 +2,7 @@ exports.glyphs['N_caron'] =
 	unicode: 'Ň'
 	glyphName: 'Ncaron'
 	characterName: 'LATIN CAPITAL LETTER N WITH CARON'
-	base: 'N'
+	base: 'N_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['N_caron'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + (10)
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x + (10)
+					y: parentAnchors[0].y
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)

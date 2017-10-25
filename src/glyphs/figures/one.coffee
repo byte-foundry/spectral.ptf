@@ -25,31 +25,28 @@ exports.glyphs['one'] =
 					x: contours[1].nodes[0].x + 115 + 60 * width + (42/80) * thickness
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 85 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: Utils.onLine({
 						x: contours[0].nodes[0].expandedTo[0].x
-						on: [ contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ]
+						on: [ contours[1].nodes[0].expandedTo[1], contours[1].nodes[1].expandedTo[1] ]
 					})
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 85 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: capHeight
-					expand: Object({
+					expand:
 						width: ( 20 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 1
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -58,29 +55,27 @@ exports.glyphs['one'] =
 					x: spacingLeft
 					y: capHeight - 150 - (17)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 35 / 80 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x
 					y: contours[0].nodes[2].expandedTo[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 65 / 80 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
 			parentParameters:
 				serifWidth: Math.min( ( 90 / 65 ) * serifWidth, serifWidth + 25 )
 		1:
@@ -88,11 +83,11 @@ exports.glyphs['one'] =
 			id: 'bottomright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)

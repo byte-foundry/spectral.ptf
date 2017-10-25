@@ -24,16 +24,14 @@ exports.glyphs['endash'] =
 					x: spacingLeft
 					y: xHeight * ( 297 / 500 ) * crossbar
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x + 200 + 200 * width
 					y: contours[0].nodes[0].y
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
-					})

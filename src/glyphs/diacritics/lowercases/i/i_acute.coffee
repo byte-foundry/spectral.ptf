@@ -2,7 +2,7 @@ exports.glyphs['i_acute'] =
 	unicode: 'í'
 	glyphName: 'iacute'
 	characterName: 'LATIN SMALL LETTER I WITH ACUTE'
-	base: 'ı'
+	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,5 +16,5 @@ exports.glyphs['i_acute'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (5)
-					y: anchors[0].y
+					x: parentAnchors[0].x - (5)
+					y: parentAnchors[0].y

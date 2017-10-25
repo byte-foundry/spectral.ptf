@@ -2,7 +2,7 @@ exports.glyphs['A_circumflex'] =
 	unicode: 'Â'
 	glyphName: 'Acircumflex'
 	characterName: 'LATIN CAPITAL LETTER A WITH CIRCUMFLEX'
-	base: 'A'
+	base: 'A_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['A_circumflex'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (5)
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x - (5)
+					y: parentAnchors[0].y
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)

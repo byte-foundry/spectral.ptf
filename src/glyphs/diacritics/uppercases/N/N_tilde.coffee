@@ -2,7 +2,7 @@ exports.glyphs['N_tilde'] =
 	unicode: 'Ñ'
 	glyphName: 'Ntilde'
 	characterName: 'LATIN CAPITAL LETTER N WITH TILDE'
-	base: 'N'
+	base: 'N_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['N_tilde'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + (15)
-					y: anchors[0].y + ( 25 / 80 ) * diacriticHeight
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x + (15)
+					y: parentAnchors[0].y + ( 25 / 80 ) * diacriticHeight
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)

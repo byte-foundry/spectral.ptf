@@ -16,9 +16,9 @@ exports.glyphs['l_acute'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (15)
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x - (15)
+					y: parentAnchors[0].y
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ],
 				['scaleX', 1.05 ]

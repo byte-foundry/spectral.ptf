@@ -27,19 +27,17 @@ exports.glyphs['plus'] =
 						( contours[1].nodes[0].y - contours[1].nodes[1].y ) / 2 + 0.5 * ( 50 / 80 ) * thickness
 					)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x + ( contours[1].nodes[0].y - contours[1].nodes[1].y )
 					y: contours[0].nodes[0].y
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -48,11 +46,10 @@ exports.glyphs['plus'] =
 					x: contours[1].nodes[1].x
 					y: xHeight + Math.max( 32, ( 32 / 450 ) * xHeight )
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 52 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: ( contours[0].nodes[1].x + contours[0].nodes[0].x ) / 2
 					y: Math.max(
@@ -60,8 +57,7 @@ exports.glyphs['plus'] =
 						( 52 / 450 ) * xHeight
 					)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 52 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})

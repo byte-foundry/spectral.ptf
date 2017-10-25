@@ -27,68 +27,63 @@ exports.glyphs['euro'] =
 						76 + ( 150 * aperture * apertureBottom - 150 ),
 						0
 					)
-					dirOut: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) + ( 26 / 180 * Math.PI )
-					expand: Object({
+					dirOut: Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}) + (26 / 180 * Math.PI)
+					expand:
 						width: ( 25 / 80 ) * thickness * contrast * contrastExtremity
 						angle: contours[0].nodes[0].dirOut - Math.PI / 2 - ( 48 / 180 * Math.PI )
 						distr: 0.1
-					})
 				1:
 					x: ( contours[0].nodes[2].expandedTo[0].x + contours[0].nodes[0].x ) * ( 227 / 395 ) - (12)
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width: ( 80 / 80 ) * thickness * contrast
 						angle: Math.acos( Math.min(
 							Math.max(
 								( ( ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * ( 174 / 295 ) ) - ( contours[0].nodes[1].x - contours[0].nodes[2].expandedTo[1].x ) ) / ( ( 80 / 80 ) * thickness * contrast ),
-								Utils.lineAngle( contours[0].nodes[1].point, contours[0].nodes[0].expandedTo[1].point )
+								Utils.lineAngle({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}, {x: contours[0].nodes[0].expandedTo[1].x, y: contours[0].nodes[0].expandedTo[1].y})
 							),
 							0.95
 						))
 						distr: 0
-					})
 				2:
 					x: contours[1].nodes[1].x + 74 + (24/80) * thickness
 					y: ( 330 / 660 ) * capHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 102 / 80 ) * thickness
 						angle: 20 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: ( contours[0].nodes[2].expandedTo[0].x + contours[0].nodes[4].x ) * ( 233 / 376 )
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 47 / 80 ) * thickness * contrast
 						angle: - 105 + 'deg'
 						angle: Math.PI + Math.acos( Math.min(
 							Math.max(
 								( ( ( contours[0].nodes[3].x - contours[0].nodes[2].expandedTo[1].x ) - ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[2].expandedTo[1].x ) * ( 124 / 206 ) ) ) / ( ( 47 / 80 ) * thickness * contrast ),
-								Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[2].expandedTo[1].point )
+								Utils.lineAngle({x: contours[0].nodes[3].x, y: contours[0].nodes[3].y}, {x: contours[0].nodes[2].expandedTo[1].x, y: contours[0].nodes[2].expandedTo[1].y})
 							),
 							0.95
 						))
 						distr: 0
-					})
 				4:
 					x: contours[0].nodes[0].expandedTo[0].x - 19 - (4)
 					y: capHeight - Math.max(
 						48 + ( 150 * aperture * apertureBottom - 150 ),
 						0
 					) - (6)
-					dirIn: Utils.lineAngle( contours[0].nodes[4].point, contours[0].nodes[3].point ) - ( 30 / 180 * Math.PI )
-					expand: Object({
+					dirIn: Utils.lineAngle({x: contours[0].nodes[4].x, y: contours[0].nodes[4].y}, {x: contours[0].nodes[3].x, y: contours[0].nodes[3].y}) - (30 / 180 * Math.PI)
+					expand:
 						width: ( 83 / 80 ) * thickness
 						angle: contours[0].nodes[4].dirIn + Math.PI / 2 - ( 12 / 180 * Math.PI )
 						distr: 0.1
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -97,21 +92,19 @@ exports.glyphs['euro'] =
 					x: ( contours[1].nodes[1].x + contours[0].nodes[0].expandedTo[0].x ) * ( 345 / 469 )
 					y: ( 387 / 660 ) * capHeight + (15)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 44 / 80 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.35
-					})
 				1:
 					x: spacingLeft
 					y: contours[1].nodes[0].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 44 / 80 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.35
-					})
 		2:
 			skeleton: true
 			closed: false
@@ -120,21 +113,19 @@ exports.glyphs['euro'] =
 					x: spacingLeft
 					y: ( 281 / 660 ) * capHeight - (15)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 44 / 80 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0.35
-					})
 				1:
 					x: contours[1].nodes[0].x
 					y: contours[2].nodes[0].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 44 / 80 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0.35
-					})
 		3:
 			skeleton: false
 			closed: true
@@ -167,7 +158,7 @@ exports.glyphs['euro'] =
 				2:
 					x: contours[0].nodes[4].expandedTo[0].x + Math.min( 3, ( 3 / 80 ) * thickness )
 					y: contours[4].nodes[4].y + ( contours[0].nodes[4].expandedTo[0].y - contours[4].nodes[4].y ) * ( 32 / 86 )
-					dirIn: Utils.lineAngle( contours[4].nodes[3].point, contours[4].nodes[2].point )
+					dirIn: Utils.lineAngle({x: contours[4].nodes[3].x, y: contours[4].nodes[3].y}, {x: contours[4].nodes[2].x, y: contours[4].nodes[2].y})
 					typeOut: 'line'
 				3:
 					x: contours[4].nodes[4].x + Math.min( 7, ( 7 / 80 ) * thickness )

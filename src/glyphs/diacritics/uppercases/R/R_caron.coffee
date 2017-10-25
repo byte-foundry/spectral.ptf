@@ -2,7 +2,7 @@ exports.glyphs['R_caron'] =
 	unicode: 'Ř'
 	glyphName: 'Rcaron'
 	characterName: 'LATIN CAPITAL LETTER R WITH CARON'
-	base: 'R'
+	base: 'R_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['R_caron'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + (15)
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x + (15)
+					y: parentAnchors[0].y
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)

@@ -1,4 +1,4 @@
-exports.glyphs['D'] =
+exports.glyphs['D_cap'] =
 	unicode: 'D'
 	glyphName: 'D'
 	characterName: 'LATIN CAPITAL LETTER D'
@@ -28,19 +28,17 @@ exports.glyphs['D'] =
 					x: spacingLeft + (22/80) * thickness * opticThickness
 					y: Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
-					expand: Object({
+					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -49,20 +47,18 @@ exports.glyphs['D'] =
 					x: contours[0].nodes[1].expandedTo[1].x - ( 45 / 80 ) * thickness * opticThickness
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[1].nodes[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 175 / 600 )
 					y: contours[0].nodes[1].y
 					dirOut: 0 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 60 / 80 ) * thickness * opticThickness * contrast
 						angle: - 115 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 360 + 200 * width - (23),
@@ -73,38 +69,35 @@ exports.glyphs['D'] =
 					type: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
-					expand: Object({
+					expand:
 						width: ( 100 / 80 ) * thickness * opticThickness
 						angle: - 160 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[1].nodes[4].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 140 / 495 )
 					y: 0
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: 92 + 'deg'
 						distr: 0
-					})
 				4:
 					x: contours[0].nodes[1].expandedTo[1].x - ( 25 / 80 ) * thickness * opticThickness
 					y: contours[0].nodes[0].y
-					expand: Object({
+					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-			parentParameters:
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+			parameters:
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		1:
@@ -112,14 +105,14 @@ exports.glyphs['D'] =
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
+					base: contours[0].nodes[1].expandedTo[0]
+					noneAnchor: contours[0].nodes[1].expandedTo[0]
+					opposite: contours[0].nodes[1].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )

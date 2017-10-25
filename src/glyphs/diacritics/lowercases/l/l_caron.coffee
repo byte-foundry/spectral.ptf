@@ -16,5 +16,5 @@ exports.glyphs['l_caron'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[1].x
-					y: anchors[1].y
+					x: parentAnchors[1].x
+					y: parentAnchors[1].y

@@ -2,7 +2,7 @@ exports.glyphs['I_acute'] =
 	unicode: 'Í'
 	glyphName: 'Iacute'
 	characterName: 'LATIN CAPITAL LETTER I WITH ACUTE'
-	base: 'I'
+	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['I_acute'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x
+					y: parentAnchors[0].y
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)

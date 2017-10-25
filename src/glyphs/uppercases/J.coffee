@@ -1,4 +1,4 @@
-exports.glyphs['J'] =
+exports.glyphs['J_cap'] =
 	unicode: 'J'
 	glyphName: 'J'
 	characterName: 'LATIN CAPITAL LETTER J'
@@ -28,30 +28,27 @@ exports.glyphs['J'] =
 					x: spacingLeft + (45/80) * thickness * opticThickness
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: Math.max( 50, Math.max( 50 * width, ( 50 / 660 ) * capHeight ))
 					dirOut: - 90 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness / Math.cos( ( Math.min( 65, 90 - 25 / 80 * thickness * opticThickness )) / 180 * Math.PI )
 						angle: ( Math.min( 65, 90 - 25 / 80 * thickness * opticThickness )) + 'deg'
 						distr: 0
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x - 50 - 50 * width
 					y: ( 173 / 250 ) * descender
 					dirIn: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 80 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 180 + 65 + 'deg'
 						distr: 1
-					})
 		1:
 			skeleton: false
 			closed: true
@@ -84,15 +81,15 @@ exports.glyphs['J'] =
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		1:
@@ -100,14 +97,14 @@ exports.glyphs['J'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )

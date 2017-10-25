@@ -16,17 +16,15 @@ exports.glyphs['line'] =
 					x: anchors[0].x
 					y: parentAnchors[0].y + 70
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 41 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: - 80
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 41 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})

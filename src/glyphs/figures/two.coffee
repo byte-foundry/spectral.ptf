@@ -25,29 +25,28 @@ exports.glyphs['two'] =
 				0:
 					x: contours[0].nodes[2].x + 200 + 200 * width
 					y: 0
-					expand: Object({
+					typeOut: 'line'
+					expand:
 						width: ( 82 / 80 ) * thickness * opticThickness
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				1:
-					x: contours[1].nodes[3].expandedTo[0].x + ( ( ( 82 / 80 ) * thickness * opticThickness ) / Math.tan( Utils.lineAngle( contours[0].nodes[2].expandedTo[1].point, contours[1].nodes[2].expandedTo[0].point ) )  )
+					x: contours[1].nodes[3].expandedTo[0].x + ( ( ( 82 / 80 ) * thickness * opticThickness ) / Math.tan( Utils.lineAngle( {x: contours[0].nodes[2].expandedTo[1].x, y: contours[0].nodes[2].expandedTo[1].y}, {x: contours[1].nodes[2].expandedTo[0].x, y: contours[1].nodes[2].expandedTo[0].y} ) )  )
 					y: 0
 					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 82 / 80 ) * thickness * opticThickness
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: spacingLeft + 10
 					y: 0
-					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 25 / 80 ) * thickness * opticThickness
 						angle: 90 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -56,22 +55,19 @@ exports.glyphs['two'] =
 					x: spacingLeft + (23/80) * thickness * opticThickness
 					y: capHeight - ( 157 / 660 ) * capHeight
 					dirOut: 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 92 / 80 ) * thickness * opticThickness
 						angle: 10 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * ( 230 / 406 )
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 56 / 80 ) * thickness * opticThickness * contrast
 						angle: - 123 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[1].nodes[0].expandedTo[0].x + 206 + 200 * width - (23),
@@ -81,22 +77,19 @@ exports.glyphs['two'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					tensionOut: 2
-					expand: Object({
+					expand:
 						width: ( 97 / 80 ) * thickness * opticThickness
 						angle: - 179 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[2].expandedTo[1].x
 					y: contours[0].nodes[2].expandedTo[1].y
-					dirIn: Utils.lineAngle( contours[0].nodes[2].expandedTo[1].point, contours[1].nodes[2].expandedTo[0].point )
-					type: 'smooth'
+					dirIn: Utils.lineAngle({x: contours[0].nodes[2].expandedTo[1].x, y: contours[0].nodes[2].expandedTo[1].y},{x: contours[1].nodes[2].expandedTo[0].x, y: contours[1].nodes[2].expandedTo[0].y} )
 					tensionIn: 1.2
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness * opticThickness * contrast
 						angle: (Math.PI / 2) + Math.acos( Math.min( 1, (contours[0].nodes[2].expandedTo[1].y) / (( 50 / 80 ) * thickness * opticThickness * contrast) ) ),
 						distr: 1
-					})
 		2:
 			skeleton: false
 			closed: true
@@ -127,12 +120,12 @@ exports.glyphs['two'] =
 			id: 'bottomrighttop'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
 					reversed: true
 					rotate: - 5 * Math.max( serifRotate, serifRotate + 1 )
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
 				[ 'translateX', - ( Math.tan( (- (5 * 2) * Math.max( serifRotate, serifRotate + 1 )) / 180 * Math.PI ) * ( ( 50 / 80 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
@@ -145,11 +138,11 @@ exports.glyphs['two'] =
 			id: 'bottomrightbottom'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
 					rotate: 5 * Math.max( serifRotate, serifRotate + 1 )
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'translateX', ( Math.tan( ((5 * 2) * Math.max( serifRotate, serifRotate + 1 )) / 180 * Math.PI ) * ( ( 50 / 80 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
 			)

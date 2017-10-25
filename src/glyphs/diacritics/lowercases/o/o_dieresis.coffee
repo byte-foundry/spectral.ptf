@@ -16,5 +16,5 @@ exports.glyphs['o_dieresis'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y - (40/80) * diacriticHeight
+					x: parentAnchors[0].x
+					y: parentAnchors[0].y - (40/80) * diacriticHeight

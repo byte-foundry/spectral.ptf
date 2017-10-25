@@ -2,7 +2,7 @@ exports.glyphs['O_macron'] =
 	unicode: 'Ō'
 	glyphName: 'Omacron'
 	characterName: 'LATIN CAPITAL LETTER O WITH MACRON'
-	base: 'O'
+	base: 'O_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,5 +16,5 @@ exports.glyphs['O_macron'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (15)
-					y: anchors[0].y + (60/80) * diacriticHeight
+					x: parentAnchors[0].x - (15)
+					y: parentAnchors[0].y + (60/80) * diacriticHeight

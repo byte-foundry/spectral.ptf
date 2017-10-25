@@ -2,7 +2,7 @@ exports.glyphs['L_caron'] =
 	unicode: 'Ľ'
 	glyphName: 'Lcaron'
 	characterName: 'LATIN CAPITAL LETTER L WITH CARON'
-	base: 'L'
+	base: 'L_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,5 +16,5 @@ exports.glyphs['L_caron'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[1].x
-					y: anchors[1].y
+					x: parentAnchors[1].x
+					y: parentAnchors[1].y

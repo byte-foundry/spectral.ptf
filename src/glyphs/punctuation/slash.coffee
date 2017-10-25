@@ -23,20 +23,16 @@ exports.glyphs['slash'] =
 				0:
 					x: spacingLeft
 					y: ( 120 / 250 ) * descender
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 200
 					y: capHeight + 90
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})

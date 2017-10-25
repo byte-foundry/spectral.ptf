@@ -2,7 +2,7 @@ exports.glyphs['semicolon'] =
 	unicode: ';'
 	glyphName: 'semicolon'
 	characterName: 'COLON'
-	base: ','
+	base: 'comma'
 	advanceWidth: base.advanceWidth
 	transforms: Array(
 		['skewX', slant + 'deg']
@@ -21,7 +21,7 @@ exports.glyphs['semicolon'] =
 			id: 'top'
 			parentAnchors:
 				0:
-					x: anchors[0].dot
+					x: parentAnchors[0].dot
 					y: Math.min(
 						xHeight,
 						Math.max(

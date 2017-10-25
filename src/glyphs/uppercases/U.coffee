@@ -1,4 +1,4 @@
-exports.glyphs['U'] =
+exports.glyphs['U_cap'] =
 	unicode: 'U'
 	glyphName: 'U'
 	characterName: 'LATIN CAPITAL LETTER U'
@@ -28,11 +28,10 @@ exports.glyphs['U'] =
 					x: spacingLeft + (22)
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: Math.max(
@@ -40,19 +39,18 @@ exports.glyphs['U'] =
 						contours[0].nodes[2].expandedTo[1].y + ( 30 / 80 ) * thickness
 					)
 					# y: ( 234 / 660 ) * capHeight
-					dirOut: 0 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					dirOut: 90 + 'deg'
+					typeIn: 'line'
+					expand:
 						width: ( 91 / 80 ) * thickness * opticThickness
 						angle: 10 + 'deg'
 						distr: 0
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: - overshoot
 					dirOut: 0 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'smooth'
+					expand:
 						# width: thickness * opticThickness * contrast / Math.sin(contours[0].nodes[2].expand.angle)
 						width: ( 64 / 80 ) * thickness * opticThickness * contrast
 						angle: 45 + 20 * contrast + 'deg'
@@ -65,44 +63,42 @@ exports.glyphs['U'] =
 						# 	0
 						# )
 						distr: 0
-					})
 				3:
 					x: contours[0].nodes[4].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y
 					dirIn: - 90 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						# width: thickness * opticThickness * contrast * - Math.cos(contours[0].nodes[3].expand.angle)
 						width: ( 73 / 80 ) * thickness * opticThickness * contrast
 						angle: - 163 + 'deg'
 						distr: 0
-					})
 				4:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 320 + 200 * width - (17),
 						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 70 / 80 ) * thickness * opticThickness * contrast
 					)
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 70 / 80 ) * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		1:
@@ -110,15 +106,15 @@ exports.glyphs['U'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		2:
@@ -126,15 +122,15 @@ exports.glyphs['U'] =
 			id: 'topleft2'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[4].expandedTo[1].point
-					noneAnchor: contours[0].nodes[4].expandedTo[1].point
-					opposite: contours[0].nodes[4].expandedTo[0].point
+					base: contours[0].nodes[4].expandedTo[1]
+					noneAnchor: contours[0].nodes[4].expandedTo[1]
+					opposite: contours[0].nodes[4].expandedTo[0]
 					reversed: true
-			transformOrigin: contours[0].nodes[4].expandedTo[0].point
+			transformOrigin: contours[0].nodes[4].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min( ( 100 / 65 ) * serifWidth, serifWidth + 35 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		3:
@@ -142,14 +138,14 @@ exports.glyphs['U'] =
 			id: 'topright2'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[4].expandedTo[0].point
-					noneAnchor: contours[0].nodes[4].expandedTo[0].point
-					opposite: contours[0].nodes[4].expandedTo[1].point
-			transformOrigin: contours[0].nodes[4].expandedTo[0].point
+					base: contours[0].nodes[4].expandedTo[0]
+					noneAnchor: contours[0].nodes[4].expandedTo[0]
+					opposite: contours[0].nodes[4].expandedTo[1]
+			transformOrigin: contours[0].nodes[4].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )

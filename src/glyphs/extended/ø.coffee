@@ -16,5 +16,5 @@ exports.glyphs['ø'] =
 			copy: true
 			parentAnchors:
 				0:
-					left: anchors[0].left
-					right: anchors[0].right
+					left: parentAnchors[0].left
+					right: parentAnchors[0].right

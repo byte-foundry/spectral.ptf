@@ -6,10 +6,10 @@ exports.glyphs['questiondown'] =
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg'],
-		['scaleY', -1],
 		['translateY', - xHeight],
-		['scaleX', -1],
 		['translateX', - contours[0].nodes[2].expandedTo[0].x - spacingRight]
+		['scaleY', -1],
+		['scaleX', -1],
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
@@ -28,21 +28,19 @@ exports.glyphs['questiondown'] =
 					x: spacingLeft + (22/80) * thickness
 					y: capHeight - ( 150 / 660 ) * capHeight
 					dirOut: 90 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 88 / 80 ) * thickness * contrastExtremity
 						angle: 6 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 205 / 380 )
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 54 / 80 ) * thickness * contrast
 						angle: - 125 / 180 * Math.PI
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 180 + 200 * width - (20),
@@ -51,26 +49,24 @@ exports.glyphs['questiondown'] =
 					y: contours[1].nodes[1].y + ( (contours[0].nodes[1].y - Math.cos( - contours[0].nodes[1].expand.angle - Math.PI / 2 ) * contours[0].nodes[1].expand.width ) - contours[1].nodes[1].y ) * ( 150 / 280 )
 					dirIn: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 92 / 80 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[1].nodes[1].expandedTo[0].x
 					y: contours[1].nodes[1].expandedTo[0].y
 					dirIn: Math.max(
 						Math.min(
-							Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[0].point ) - Math.PI / 2 + 10 - 10 * width,
-							Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[0].point ) - Math.PI / 2
+							Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y}) - Math.PI / 2 + 10 - 10 * width,
+							Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y}) - Math.PI / 2
 						),
 						0
 					)
-					expand: Object({
+					expand:
 						width: ( 85 / 80 ) * thickness
-						angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[0].point )
+						angle: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y})
 						distr: 1
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -81,7 +77,8 @@ exports.glyphs['questiondown'] =
 						contours[1].nodes[1].expandedTo[0].x + 10
 					)
 					y: Math.min(
-						contours[0].nodes[3].y + Math.cos( (-80 / 180 * Math.PI) - contours[0].nodes[3].expand.angle ) * contours[0].nodes[3].expand.width - 10,
+						#contours[0].nodes[3].y + Math.cos( (-80 / 180 * Math.PI) - contours[0].nodes[3].expand.angle ) * contours[0].nodes[3].expand.width - 10,
+						contours[0].nodes[3].y - 10,
 						- overshoot + Math.max(
 							40,
 							Math.min(
@@ -91,19 +88,17 @@ exports.glyphs['questiondown'] =
 						) + ( 80 / 660 ) * capHeight
 					)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 20 / 80 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 1
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 135 / 380 )
 					y: ( 345 / 660 ) * capHeight
-					expand: Object({
+					expand:
 						width: ( 62 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 		2:
 			skeleton: false
 			closed: true

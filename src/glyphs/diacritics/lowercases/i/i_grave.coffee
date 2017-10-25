@@ -2,7 +2,7 @@ exports.glyphs['i_grave'] =
 	unicode: 'ì'
 	glyphName: 'igrave'
 	characterName: 'LATIN SMALL LETTER I WITH GRAVE'
-	base: 'ı'
+	base: 'dotlessi'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,5 +16,5 @@ exports.glyphs['i_grave'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (5)
-					y: anchors[0].y
+					x: parentAnchors[0].x - (5)
+					y: parentAnchors[0].y

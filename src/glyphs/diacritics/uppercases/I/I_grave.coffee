@@ -2,7 +2,7 @@ exports.glyphs['I_grave'] =
 	unicode: 'Ì'
 	glyphName: 'Igrave'
 	characterName: 'LATIN CAPITAL LETTER I WITH GRAVE'
-	base: 'I'
+	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['I_grave'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x
+					y: parentAnchors[0].y
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)

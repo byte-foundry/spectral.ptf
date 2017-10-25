@@ -24,17 +24,15 @@ exports.glyphs['bar'] =
 					x: spacingLeft
 					y: descender - overshoot
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: ascenderHeight + overshoot
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})

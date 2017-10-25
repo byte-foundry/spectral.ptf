@@ -2,7 +2,7 @@ exports.glyphs['U_acute'] =
 	unicode: 'Ú'
 	glyphName: 'Uacute'
 	characterName: 'LATIN CAPITAL LETTER U WITH ACUTE'
-	base: 'U'
+	base: 'U_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['U_acute'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x
+					y: parentAnchors[0].y
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)

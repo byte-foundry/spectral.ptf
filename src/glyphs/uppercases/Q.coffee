@@ -1,4 +1,4 @@
-exports.glyphs['Q'] =
+exports.glyphs['Q_cap'] =
 	unicode: 'Q'
 	glyphName: 'Q'
 	characterName: 'LATIN CAPITAL LETTER Q'
@@ -31,21 +31,19 @@ exports.glyphs['Q'] =
 					y: ( 330 / 660 ) * capHeight + (7)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 102 / 80 ) * thickness * opticThickness
 						angle: 20 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 52 / 80 ) * thickness * opticThickness * contrast
 						angle: - 110 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 465 + 200 * width - (22),
@@ -54,21 +52,19 @@ exports.glyphs['Q'] =
 					y: contours[0].nodes[0].expandedTo[0].y - (9)
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 102 / 80 ) * thickness * opticThickness
 						angle: 200 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[1].x
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 54 / 80 ) * thickness * opticThickness * contrast
 						angle: 68 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -77,28 +73,25 @@ exports.glyphs['Q'] =
 					x: contours[1].nodes[1].x + ( 65 / 80 ) * thickness * opticThickness + (20)
 					y: contours[1].nodes[1].expandedTo[1].y
 					dirOut: - 150 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 15 / 80 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.4
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + 5 * width - (20)
 					y: ( 115 / 250 ) * descender - (12)
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 70 / 80 ) * thickness * opticThickness
 						angle: 180 - 152 + 'deg'
 						distr: 0.65
-					})
 				2:
 					x: contours[0].nodes[3].x
 					y: contours[0].nodes[3].expandedTo[0].y + ( contours[0].nodes[3].expandedTo[1].y - contours[0].nodes[3].expandedTo[0].y ) * 0.5
 					dirIn: Math.max( - 90, ( 45 / 250 ) * descender ) + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: Math.min( thickness * opticThickness * contrast + 55, ( 135 / 80 ) * thickness * opticThickness * contrast )
 						angle: 0 + 'deg'
 						distr: 0.4
-					})

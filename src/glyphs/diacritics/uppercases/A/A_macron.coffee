@@ -2,7 +2,7 @@ exports.glyphs['A_macron'] =
 	unicode: 'Ā'
 	glyphName: 'Amacron'
 	characterName: 'LATIN CAPITAL LETTER A WITH MACRON'
-	base: 'A'
+	base: 'A_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,5 +16,5 @@ exports.glyphs['A_macron'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (5)
-					y: anchors[0].y + (60/80) * diacriticHeight
+					x: parentAnchors[0].x - (5)
+					y: parentAnchors[0].y + (60/80) * diacriticHeight

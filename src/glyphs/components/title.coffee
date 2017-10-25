@@ -16,8 +16,7 @@ exports.glyphs['title'] =
 					x: 0
 					y: 0
 					dirOut: 0 + 'deg'
-					expand: Object({
+					expand:
 						width: 0
 						angle: 0 + 'deg'
 						distr: 0.25
-					})

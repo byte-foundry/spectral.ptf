@@ -2,7 +2,7 @@ exports.glyphs['E_dieresis'] =
 	unicode: 'Ë'
 	glyphName: 'Edieresis'
 	characterName: 'LATIN CAPITAL LETTER E WITH DIAERESIS'
-	base: 'E'
+	base: 'E_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,5 +16,5 @@ exports.glyphs['E_dieresis'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (15)
-					y: anchors[0].y - (50/80) * diacriticHeight
+					x: parentAnchors[0].x - (15)
+					y: parentAnchors[0].y - (50/80) * diacriticHeight

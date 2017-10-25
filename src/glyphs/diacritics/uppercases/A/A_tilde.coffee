@@ -2,7 +2,7 @@ exports.glyphs['A_tilde'] =
 	unicode: 'Ã'
 	glyphName: 'Atilde'
 	characterName: 'LATIN CAPITAL LETTER A WITH TILDE'
-	base: 'A'
+	base: 'A_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -16,9 +16,9 @@ exports.glyphs['A_tilde'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y + ( 25 / 80 ) * diacriticHeight
-			transformOrigin: anchors[0].point
+					x: parentAnchors[0].x
+					y: parentAnchors[0].y + ( 25 / 80 ) * diacriticHeight
+			transformOrigin: anchors[0]
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)
