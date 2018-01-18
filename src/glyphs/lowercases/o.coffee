@@ -33,6 +33,7 @@ exports.glyphs['o'] =
 					type: 'smooth'
 					expand: Object({
 						width: ( 92 / 80 ) * thickness
+						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
