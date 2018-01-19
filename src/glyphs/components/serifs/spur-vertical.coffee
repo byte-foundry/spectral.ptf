@@ -39,7 +39,7 @@ exports.glyphs['spur-vertical'] =
 				0:
 					x: anchors[0].x
 					y: anchors[0].y + serifHeight + serifCurve - (contours[0].nodes[7].x - contours[0].nodes[0].x) * Math.tan(anchors[2].rotate / 180 * Math.PI)
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					tensionOut: serifRoundness
 				1:
 					x: anchors[0].x + Math.max(
@@ -69,7 +69,7 @@ exports.glyphs['spur-vertical'] =
 					typeIn: 'smooth'
 					typeOut: 'line'
 					tensionIn: serifTerminalCurve
-					dirOut: 0 + 'deg'
+					dirOut: 0
 				5:
 					# x: anchors[1] - anchors[2].aperture
 					x: anchors[0].x + Math.abs( parentAnchors[0].opposite.x - parentAnchors[0].base.x ) * 0.8 - anchors[2].aperture
@@ -80,7 +80,7 @@ exports.glyphs['spur-vertical'] =
 					# x: parentAnchors[0].opposite.x - anchors[2].aperture
 					x: anchors[0].x + Math.abs( parentAnchors[0].opposite.x - parentAnchors[0].base.x ) - anchors[2].aperture
 					y: anchors[0].y + serifArc * serifHeight
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					typeOut: 'line'
 				7:
 					# x: parentAnchors[0].opposite.x

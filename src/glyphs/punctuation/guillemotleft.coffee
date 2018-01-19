@@ -27,7 +27,7 @@ exports.glyphs['guillemotleft'] =
 					typeOut: 'line'
 					expand:
 						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: spacingLeft + (25/100) * thickness
@@ -36,7 +36,7 @@ exports.glyphs['guillemotleft'] =
 					typeIn: 'line'
 					expand:
 						width: ( 100 / 80 ) * thickness * Math.sqrt( width )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x
@@ -44,7 +44,7 @@ exports.glyphs['guillemotleft'] =
 					typeIn: 'line'
 					expand:
 						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 		1:
 			skeleton: true
@@ -59,7 +59,7 @@ exports.glyphs['guillemotleft'] =
 					typeOut: 'line'
 					expand:
 						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x - 10 * width + (25/100) * thickness
@@ -68,7 +68,7 @@ exports.glyphs['guillemotleft'] =
 					typeIn: 'line'
 					expand:
 						width: ( 100 / 80 ) * thickness * Math.sqrt( width )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x
@@ -76,5 +76,5 @@ exports.glyphs['guillemotleft'] =
 					typeIn: 'line'
 					expand:
 						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0

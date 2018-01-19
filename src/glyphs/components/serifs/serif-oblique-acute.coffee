@@ -83,11 +83,11 @@ exports.glyphs['serif-oblique-acute'] =
 					y: anchors[0].y
 					type: 'smooth'
 					tensionIn: serifTerminalCurve
-					dirOut: 0 + 'deg'
+					dirOut: 0
 				5:
 					x: anchors[1].x
 					y: anchors[0].y + serifArc * serifHeight
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					typeOut: 'line'
 				6:
 					x: Utils.onLine({

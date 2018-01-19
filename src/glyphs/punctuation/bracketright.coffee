@@ -5,7 +5,7 @@ exports.glyphs['bracketright'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 5
@@ -26,7 +26,7 @@ exports.glyphs['bracketright'] =
 					typeOut: 'line'
 					expand:
 						width: ( 62 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['bracketright'] =
 					typeOut: 'line'
 					expand:
 						width: ( 62 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -46,7 +46,7 @@ exports.glyphs['bracketright'] =
 					typeOut: 'line'
 					expand:
 						width: ( 23 / 80 ) * thickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: spacingLeft
@@ -54,7 +54,7 @@ exports.glyphs['bracketright'] =
 					typeOut: 'line'
 					expand:
 						width: ( 23 / 80 ) * thickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		2:
 			skeleton: true
@@ -66,7 +66,7 @@ exports.glyphs['bracketright'] =
 					typeOut: 'line'
 					expand:
 						width: ( 23 / 80 ) * thickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 1
 				1:
 					x: contours[1].nodes[1].x
@@ -74,5 +74,5 @@ exports.glyphs['bracketright'] =
 					typeOut: 'line'
 					expand:
 						width: ( 23 / 80 ) * thickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 1

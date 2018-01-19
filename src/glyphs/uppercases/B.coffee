@@ -5,7 +5,7 @@ exports.glyphs['B_cap'] =
 	ot:
 		advanceWidth: contours[2].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 65 + ( 80 / 65 ) * serifWidth
@@ -26,14 +26,14 @@ exports.glyphs['B_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -45,16 +45,16 @@ exports.glyphs['B_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[1].nodes[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 145 / 367 )
 					y: contours[0].nodes[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					tensionOut: 1.1
 					expand:
 						width: ( 60 / 80 ) * thickness * opticThickness * contrast
-						angle: - 112 + 'deg'
+						angle:( - 112 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
@@ -62,20 +62,20 @@ exports.glyphs['B_cap'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 97 / 80 ) * thickness * opticThickness + 10
 					)
 					y: contours[1].nodes[3].expandedTo[0].y + ( contours[1].nodes[0].expandedTo[0].y - contours[1].nodes[3].expandedTo[0].y ) * ( 164 / 312 ) - (5)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 97 / 80 ) * thickness * opticThickness
-						angle: - 165 + 'deg'
+						angle:( - 165 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[2].nodes[1].expandedTo[0].x - (36)
 					y: contours[2].nodes[0].expandedTo[0].y
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					type: 'smooth'
 					expand:
 						width: ( 45 / 80 ) * thickness * opticThickness * contrast
-						angle: 63 + 'deg'
+						angle:( 63 ) / 180 * Math.PI
 						distr: 1
 		2:
 			skeleton: true
@@ -87,7 +87,7 @@ exports.glyphs['B_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 				1:
 					x: Math.max(
@@ -96,11 +96,11 @@ exports.glyphs['B_cap'] =
 					)
 					# x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[2].nodes[0].expandedTo[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					tensionOut: 1.1
 					expand:
 						width: ( 64 / 80 ) * thickness * opticThickness * contrast
-						angle: 180 + 120 + 'deg'
+						angle:( 180 + 120 ) / 180 * Math.PI
 						distr: 1
 				2:
 					x: Math.max(
@@ -108,11 +108,11 @@ exports.glyphs['B_cap'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 94 / 80 ) * thickness * opticThickness + 10
 					)
 					y: contours[2].nodes[4].expandedTo[0].y + ( contours[2].nodes[0].expandedTo[0].y - contours[2].nodes[4].expandedTo[0].y ) * ( 192 / 368 )
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 94 / 80 ) * thickness * opticThickness
-						angle: - 175 + 'deg'
+						angle:( - 175 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: Math.max(
@@ -120,18 +120,18 @@ exports.glyphs['B_cap'] =
 						contours[0].nodes[0].expandedTo[1].x
 					)
 					y: 0
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				4:
 					x: contours[0].nodes[0].expandedTo[1].x - ( 45 / 80 ) * thickness * opticThickness
 					y: 0
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 	components:
 		0:

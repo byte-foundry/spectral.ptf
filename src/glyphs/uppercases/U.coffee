@@ -5,7 +5,7 @@ exports.glyphs['U_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 65 + ( 80 / 65 ) * serifWidth
@@ -30,7 +30,7 @@ exports.glyphs['U_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
@@ -39,21 +39,21 @@ exports.glyphs['U_cap'] =
 						contours[0].nodes[2].expandedTo[1].y + ( 30 / 80 ) * thickness
 					)
 					# y: ( 234 / 660 ) * capHeight
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeIn: 'line'
 					expand:
 						width: ( 91 / 80 ) * thickness * opticThickness
-						angle: 10 + 'deg'
+						angle:( 10 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					expand:
 						# width: thickness * opticThickness * contrast / Math.sin(contours[0].nodes[2].expand.angle)
 						width: ( 64 / 80 ) * thickness * opticThickness * contrast
-						angle: 45 + 20 * contrast + 'deg'
+						angle:( 45 + 20 * contrast ) / 180 * Math.PI
 						# TODO:
 						# angle: Math.max(
 						# 	Math.atan2(
@@ -66,12 +66,12 @@ exports.glyphs['U_cap'] =
 				3:
 					x: contours[0].nodes[4].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y
-					dirIn: - 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
 					expand:
 						# width: thickness * opticThickness * contrast * - Math.cos(contours[0].nodes[3].expand.angle)
 						width: ( 73 / 80 ) * thickness * opticThickness * contrast
-						angle: - 163 + 'deg'
+						angle:( - 163 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: Math.max(
@@ -82,7 +82,7 @@ exports.glyphs['U_cap'] =
 					typeIn: 'line'
 					expand:
 						width: ( 70 / 80 ) * thickness * opticThickness * contrast
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 	components:
 		0:

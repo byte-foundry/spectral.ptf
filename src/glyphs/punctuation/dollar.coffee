@@ -6,7 +6,7 @@ exports.glyphs['dollar'] =
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 48
@@ -27,19 +27,19 @@ exports.glyphs['dollar'] =
 						( 140 / 660 ) * capHeight,
 						140
 					)
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					expand:
 						width: ( 72 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[2].expandedTo[0].x ) * ( 192 / 404 )
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 47 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + 206 + 200 * width - (22)
@@ -52,11 +52,11 @@ exports.glyphs['dollar'] =
 							) -
 							(contours[0].nodes[1].y + ( 36 / 80 ) * thickness * opticThickness)
 						) * 0.5 + (13)
-					dirIn: - 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 84 / 80 ) * thickness * opticThickness
-						angle: - 160 + 'deg'
+						angle:( - 160 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[4].expandedTo[1].x ) * ( 140 / 290 )
@@ -85,21 +85,21 @@ exports.glyphs['dollar'] =
 							) * 0.5 * ( 88 / 80 ) * thickness * opticThickness
 						)
 					) * 0.5
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					tensionIn: 1.2
 					expand:
 						width: ( 95 / 80 ) * thickness * opticThickness
-						angle: 180 + 20 + 'deg'
+						angle:( 180 + 20 ) / 180 * Math.PI
 						distr: 0.75
 				5:
 					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[6].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) * 0.55
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 49 / 80 ) * thickness * opticThickness * contrast
-						angle: 180 - 100 + 'deg'
+						angle:( 180 - 100 ) / 180 * Math.PI
 						distr: 1
 				6:
 					x: contours[0].nodes[2].expandedTo[0].x - 15 - (18/80) * thickness
@@ -107,10 +107,10 @@ exports.glyphs['dollar'] =
 						( 118 / 660 ) * capHeight,
 						118
 					)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					expand:
 						width: ( 72 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 		1:
 			skeleton: false

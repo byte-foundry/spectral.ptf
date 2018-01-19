@@ -3,7 +3,8 @@
 var gulp = require('gulp'),
 	karma = require('karma').server,
 	operation = require('./operationalyzer'),
-	jsufon = require('./jsufonify');
+	jsufon = require('./jsufonify'),
+	bakeOpOrder = require('./bakeOpOrder.js');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*']
@@ -14,21 +15,22 @@ gulp.task('clean-dist', function() {
 		.pipe($.rimraf());
 });
 
+gulp.task('build:free', ['copy'], function() {
+	return gulp.src('src/**/*.coffee')
+		.pipe($.coffee({bare: true}).on('error', $.util.log))
+		.pipe(operation())
+		.pipe($.concat('font_free.json'))
+		.pipe(jsufon(true))
+		.pipe(gulp.dest('dist/'));
+});
+
 gulp.task('build', function() {
 	return gulp.src('src/**/*.coffee')
 		.pipe($.coffee({bare: true}).on('error', $.util.log))
 		.pipe(operation())
 		.pipe($.concat('font.json'))
 		.pipe(jsufon())
-		.pipe(gulp.dest('dist/'));
-});
-
-gulp.task('build:free', function() {
-	return gulp.src('src/**/*.coffee')
-		.pipe($.coffee({bare: true}).on('error', $.util.log))
-		.pipe(operation())
-		.pipe($.concat('font_free.json'))
-		.pipe(jsufon(true))
+		.pipe(bakeOpOrder())
 		.pipe(gulp.dest('dist/'));
 });
 

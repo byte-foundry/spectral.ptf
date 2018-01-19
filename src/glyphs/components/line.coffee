@@ -18,7 +18,7 @@ exports.glyphs['line'] =
 					typeOut: 'line'
 					expand:
 						width: ( 41 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
@@ -26,5 +26,5 @@ exports.glyphs['line'] =
 					typeOut: 'line'
 					expand:
 						width: ( 41 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

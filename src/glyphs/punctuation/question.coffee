@@ -5,7 +5,7 @@ exports.glyphs['question'] =
 	ot:
 		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
@@ -23,15 +23,15 @@ exports.glyphs['question'] =
 				0:
 					x: spacingLeft + (22/80) * thickness
 					y: capHeight - ( 150 / 660 ) * capHeight
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					expand:
 						width: ( 88 / 80 ) * thickness * contrastExtremity
-						angle: 6 + 'deg'
+						angle:( 6 ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 205 / 380 )
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 54 / 80 ) * thickness * contrast
@@ -43,11 +43,11 @@ exports.glyphs['question'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 92 / 80 ) * thickness + 10
 					)
 					y: contours[1].nodes[1].y + ( (contours[0].nodes[1].y - Math.cos( - contours[0].nodes[1].expand.angle - Math.PI / 2 ) * contours[0].nodes[1].expand.width ) - contours[1].nodes[1].y ) * ( 150 / 280 )
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 92 / 80 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				3:
 					x: contours[1].nodes[1].expandedTo[0].x
@@ -86,14 +86,14 @@ exports.glyphs['question'] =
 					typeOut: 'line'
 					expand:
 						width: ( 20 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 135 / 380 )
 					y: ( 345 / 660 ) * capHeight
 					expand:
 						width: ( 62 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 		2:
 			skeleton: false
@@ -102,7 +102,7 @@ exports.glyphs['question'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].expandedTo[0].y
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 				1:
 					x: contours[2].nodes[0].x + ( contours[2].nodes[4].x - contours[2].nodes[0].x ) * ( 38 / 87 )
 					y: contours[0].nodes[0].expandedTo[0].y - ( 40 / 80 ) * thickness

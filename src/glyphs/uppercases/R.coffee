@@ -5,7 +5,7 @@ exports.glyphs['R_cap'] =
 	ot:
 		advanceWidth: contours[2].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 65 + ( 80 / 65 ) * serifWidth
@@ -30,14 +30,14 @@ exports.glyphs['R_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -49,7 +49,7 @@ exports.glyphs['R_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: Math.max(
@@ -57,10 +57,10 @@ exports.glyphs['R_cap'] =
 						contours[1].nodes[0].expandedTo[1].x
 					)
 					y: contours[0].nodes[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: ( 60 / 80 ) * thickness * opticThickness * contrast
-						angle: - 112 + 'deg'
+						angle:( - 112 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
@@ -68,16 +68,16 @@ exports.glyphs['R_cap'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.5 * ( 98 / 80 ) * thickness * opticThickness + 10
 					)
 					y: contours[1].nodes[4].expandedTo[0].y + ( contours[1].nodes[0].expandedTo[0].y - contours[1].nodes[4].expandedTo[0].y ) * ( 190 / 370 ) - (5)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 98 / 80 ) * thickness * opticThickness
-						angle: - 175 + 'deg'
+						angle:( - 175 ) / 180 * Math.PI
 						distr: 0.5
 				3:
 					x: contours[1].nodes[1].expandedTo[0].x - 15
 					y: contours[1].nodes[4].expandedTo[0].y
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					typeOut: 'line'
 					tensionIn: 0.7
 					expand:
@@ -89,7 +89,7 @@ exports.glyphs['R_cap'] =
 					y: ( 330 / 660 ) * capHeight * crossbar
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 		2:
 			skeleton: true
@@ -116,7 +116,7 @@ exports.glyphs['R_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ((90 / 80) * thickness) / Math.sin(Math.PI - Utils.lineAngle({x: contours[2].nodes[1].x, y: contours[2].nodes[1].y}, {x: contours[2].nodes[0].x, y: contours[2].nodes[0].y}))
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 1
 	components:
 		0:

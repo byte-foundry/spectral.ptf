@@ -6,7 +6,7 @@ exports.glyphs['V_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 35 + ( 47 / 65 ) * serifWidth
@@ -30,7 +30,7 @@ exports.glyphs['V_cap'] =
 							( 93 / 80 ) * thickness * opticThickness,
 							thickness * opticThickness / (- Math.sin(Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})))
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[1].nodes[1].expandedTo[0].x
@@ -53,7 +53,7 @@ exports.glyphs['V_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 67 / 80 ) * thickness * opticThickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: (spacingLeft) + ( contours[1].nodes[0].expandedTo[0].x - (spacingLeft) ) * 0.51

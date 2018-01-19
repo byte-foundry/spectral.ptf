@@ -20,7 +20,7 @@ exports.glyphs['cedilla'] =
 					typeOut: 'line'
 					expand:
 						width: ( 35 / 80 ) * thickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x - 57 * width
@@ -51,20 +51,20 @@ exports.glyphs['cedilla'] =
 						contours[0].nodes[1].expandedTo[1].x + 70
 					)
 					y: contours[1].nodes[2].y + ( contours[1].nodes[0].expandedTo[1].y - contours[1].nodes[2].y ) * ( 85 / 191 )
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 62 / 80 ) * thickness
-						angle: 180 - 165 + 'deg'
+						angle:( 180 - 165 ) / 180 * Math.PI
 						distr: 0.75
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + 7
 					y: - 240 # TODO
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 35 / 90 ) * thickness * contrast
-						angle: 180 + 117 + 'deg'
+						angle:( 180 + 117 ) / 180 * Math.PI
 						distr: 1
 				3:
 					x: contours[0].nodes[1].expandedTo[0].x - 20
@@ -75,5 +75,5 @@ exports.glyphs['cedilla'] =
 					dirIn: Utils.lineAngle({x: contours[1].nodes[3].x, y: contours[1].nodes[3].y}, {x: contours[1].nodes[2].x, y: contours[1].nodes[2].y}) - (20 / 180 * Math.PI)
 					expand:
 						width: ( 12 / 90 ) * thickness * contrast
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1

@@ -28,7 +28,7 @@ exports.glyphs['circumflex'] =
 					typeIn: 'line'
 					expand:
 						width: ( 12 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -40,7 +40,7 @@ exports.glyphs['circumflex'] =
 					typeOut: 'line'
 					expand:
 						width: ( 12 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				1:
 					x: anchors[0].x + Math.min(15, ( 15 / 80 ) * thickness * contrast )

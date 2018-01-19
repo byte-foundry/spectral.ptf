@@ -5,7 +5,7 @@ exports.glyphs['E_cap'] =
 	ot:
 		advanceWidth: contours[3].nodes[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 65 + ( 80 / 65 ) * serifWidth
@@ -30,14 +30,14 @@ exports.glyphs['E_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -49,14 +49,14 @@ exports.glyphs['E_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 210 + 200 * width + Math.max( 0, ( 20 / 80 ) * thickness - 20 )
 					y: contours[1].nodes[0].expandedTo[0].y
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		2:
 			skeleton: true
@@ -68,14 +68,14 @@ exports.glyphs['E_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 125 + 200 * width + Math.max( 0, ( 20 / 80 ) * thickness - 20 )
 					y: contours[2].nodes[0].y
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.5
 		3:
 			skeleton: true
@@ -86,7 +86,7 @@ exports.glyphs['E_cap'] =
 					y: contours[3].nodes[1].expandedTo[0].y
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x
@@ -94,7 +94,7 @@ exports.glyphs['E_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 	components:
 		0:

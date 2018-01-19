@@ -6,7 +6,7 @@ exports.glyphs['r'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 50 + serifWidth
@@ -31,14 +31,14 @@ exports.glyphs['r'] =
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[1].nodes[3].expandedTo[1].y + (20)
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -54,7 +54,7 @@ exports.glyphs['r'] =
 					dirOut: Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y})
 					expand:
 						width: ( 74 / 80 ) * thickness
-						angle: 180 - 116 + 'deg'
+						angle:( 180 - 116 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 132 * width + ( 20 / 80 ) * thickness
@@ -66,17 +66,17 @@ exports.glyphs['r'] =
 					tensionOut: 1 * contrast
 					expand:
 						width: ( 90 / 80 ) * thickness
-						angle: 180 - 116 + 'deg'
+						angle:( 180 - 116 ) / 180 * Math.PI
 						distr: 1
 				2:
 					x: contours[1].nodes[3].x + ( contours[1].nodes[1].x - contours[1].nodes[3].x ) * ( 124 / 184 )
 					y: xHeight + overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					tensionOut: 1.25
 					type: 'smooth'
 					expand:
 						width: ( 93 / 80 ) * thickness * contrast
-						angle: 180 - 122 + 'deg'
+						angle:( 180 - 122 ) / 180 * Math.PI
 						distr: 1
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x - ( 8 / 80 ) * thickness
@@ -84,7 +84,7 @@ exports.glyphs['r'] =
 					dirIn: Utils.lineAngle({x: contours[1].nodes[3].expandedTo[1].x, y: contours[1].nodes[3].expandedTo[1].y}, {x: contours[1].nodes[2].expandedTo[1].x, y: contours[1].nodes[2].expandedTo[1].y}) + (12 / 180 * Math.PI)
 					expand:
 						width: ( 34 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 180 - 90 + 'deg'
+						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 0.9
 		2:
 			skeleton: false
@@ -99,7 +99,7 @@ exports.glyphs['r'] =
 				1:
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].expandedTo[1].y
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x + 7

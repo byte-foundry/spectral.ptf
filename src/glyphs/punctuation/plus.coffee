@@ -5,7 +5,7 @@ exports.glyphs['plus'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
@@ -29,14 +29,14 @@ exports.glyphs['plus'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x + ( contours[1].nodes[0].y - contours[1].nodes[1].y )
 					y: contours[0].nodes[0].y
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 		1:
 			skeleton: true
@@ -48,7 +48,7 @@ exports.glyphs['plus'] =
 					typeOut: 'line'
 					expand:
 						width: ( 52 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: ( contours[0].nodes[1].x + contours[0].nodes[0].x ) / 2
@@ -59,5 +59,5 @@ exports.glyphs['plus'] =
 					typeOut: 'line'
 					expand:
 						width: ( 52 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

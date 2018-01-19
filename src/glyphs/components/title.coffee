@@ -15,8 +15,8 @@ exports.glyphs['title'] =
 				0:
 					x: 0
 					y: 0
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: 0
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25

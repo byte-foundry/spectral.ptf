@@ -6,7 +6,7 @@ exports.glyphs['q'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 50
@@ -31,7 +31,7 @@ exports.glyphs['q'] =
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 				1:
 					x: Math.max(
@@ -43,7 +43,7 @@ exports.glyphs['q'] =
 					typeIn: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[1].expandedTo[1].x
@@ -51,7 +51,7 @@ exports.glyphs['q'] =
 					typeIn: 'line'
 					expand:
 						width: ( 6 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 		1:
 			skeleton: true
@@ -60,49 +60,49 @@ exports.glyphs['q'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[0].x + ( 10 / 80 ) * thickness
 					y: Math.min( 65, ( 65 / 450 ) * xHeight )
-					dirOut: - 140 + 'deg'
+					dirOut:( - 140 ) / 180 * Math.PI
 					expand:
 						width: ( 35 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: contours[1].nodes[2].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[1].nodes[2].expandedTo[0].x ) * ( 175 / 340 )
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 88 / 80 ) * thickness * contrast
-						angle: 50 + 'deg'
+						angle:( 50 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: spacingLeft + (20/80) * thickness
 					y: contours[1].nodes[1].y + ( contours[1].nodes[3].y - contours[1].nodes[1].y ) * ( 204 / 470 ) + (6)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 83 / 80 ) * thickness
-						angle: 18 + 'deg'
+						angle:( 18 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[1].nodes[2].expandedTo[0].x + ( contours[1].nodes[4].expandedTo[0].x - contours[1].nodes[2].expandedTo[0].x ) * ( 240 / 390 )
 					y: xHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 80 ) * thickness * contrast
-						angle: - 105 + 'deg'
+						angle:( - 105 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[0].nodes[1].expandedTo[0].x + ( 60 / 80 ) * thickness
 					y: xHeight - ( 20 / 450 ) * xHeight
-					dirIn: 140 + 'deg'
+					dirIn:( 140 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 87 / 80 ) * thickness * contrast * contrastExtremity
 						angle: Math.min(
 							- 120 + ( ( 20 / 80 ) * thickness - 20 ),
 							- 90
-						) + 'deg'
+						) / 180 * Math.PI
 						distr: 0
 	components:
 		0:

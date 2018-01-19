@@ -5,7 +5,7 @@ exports.glyphs['t'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 18
@@ -33,7 +33,7 @@ exports.glyphs['t'] =
 					typeOut: 'line'
 					expand:
 						width: ( 6 / 80 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 1
 				1:
 					x: contours[0].nodes[0].x + 72 * width + ( 10 / 80 ) * thickness
@@ -42,7 +42,7 @@ exports.glyphs['t'] =
 					typeOut: 'line'
 					expand:
 						width: ( 47 / 80 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[1].nodes[3].expandedTo[1].x + 132 * width
@@ -50,7 +50,7 @@ exports.glyphs['t'] =
 					typeIn: 'line'
 					expand:
 						width: ( 47 / 80 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		1:
 			skeleton: true
@@ -68,16 +68,16 @@ exports.glyphs['t'] =
 					)
 					expand:
 						width: ( 10 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 108 + 'deg'
+						angle:( 108 ) / 180 * Math.PI
 						distr: 0.1
 				1:
 					x: contours[1].nodes[2].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[1].nodes[2].expandedTo[0].x ) * 0.5 - (4)
 					y: - overshoot
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					typeOut: 'smooth'
 					expand:
 						width: ( (41 + 41 * contrast) / 80 ) * thickness
-						# angle: 55 + 'deg'
+						# angle:( 55 ) / 180 * Math.PI
 						angle: Math.max(
 							Math.atan2(
 								((( 82 / 80 ) * thickness * opticThickness * contrast) + overshoot),
@@ -92,11 +92,11 @@ exports.glyphs['t'] =
 						90,
 						contours[1].nodes[1].y + Math.sin( 55 / 180 * Math.PI ) * ( 82 / 80 ) * thickness + 33
 					)
-					dirIn: - 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
 					expand:
 						width: ( 82 / 80 ) * thickness
-						angle: 12 + 'deg'
+						angle:( 12 ) / 180 * Math.PI
 						distr: 0
 				3:
 					x: contours[0].nodes[1].x
@@ -105,7 +105,7 @@ exports.glyphs['t'] =
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				4:
 					x: contours[1].nodes[3].expandedTo[1].x
@@ -116,5 +116,5 @@ exports.glyphs['t'] =
 					typeIn: 'line'
 					expand:
 						width: ( 6 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1

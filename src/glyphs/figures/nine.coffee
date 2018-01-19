@@ -6,7 +6,7 @@ exports.glyphs['nine'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
@@ -27,11 +27,11 @@ exports.glyphs['nine'] =
 					dirOut: 15 + 10 + Math.min(
 						10 - 10 * width,
 						- 10
-					) + 'deg'
+					) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 30 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -39,39 +39,39 @@ exports.glyphs['nine'] =
 						contours[0].nodes[3].expandedTo[1].x + 0.75 * ( 95 / 80 ) * thickness * opticThickness + 10
 					)
 					y: contours[0].nodes[0].y + ( contours[0].nodes[2].y - contours[0].nodes[0].y ) * ( 435 / 680 )
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 95 / 80 ) * thickness * opticThickness
-						angle: - 174 + 'deg'
+						angle:( - 174 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: contours[0].nodes[3].expandedTo[0].x + ( contours[0].nodes[1].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * ( 215 / 435 )
 					y: capHeight + overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 46 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				3:
 					x: spacingLeft + (24/80) * thickness
 					y: contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * ( 190 / 400 )
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					tensionIn: 1.1
 					expand:
 						width: ( 95 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				4:
 					x: contours[0].nodes[3].expandedTo[0].x + ( contours[0].nodes[5].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * 0.5
 					y: ( 270 / 660 ) * capHeight + (9)
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 77 / 80 ) * thickness * opticThickness * contrast
-						angle: 60 + 'deg'
+						angle:( 60 ) / 180 * Math.PI
 						distr: 0.1
 				5:
 					x: contours[0].nodes[1].expandedTo[1].x

@@ -5,7 +5,7 @@ exports.glyphs['S_sc'] =
 	base: 'S_cap'
 	advanceWidth: base.advanceWidth
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',

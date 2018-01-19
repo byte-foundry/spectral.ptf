@@ -5,7 +5,7 @@ exports.glyphs['f'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
@@ -26,26 +26,26 @@ exports.glyphs['f'] =
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: xHeight + ( 40 / 300 ) * ascender
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					tensionOut: 0.8
 					expand:
 						width: ( 126 / 80 ) * thickness
-						angle: 50 + 'deg'
+						angle:( 50 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 230 / 265 )
 					y: ascenderHeight
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					tensionIn: 0.8
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness * contrast
-						angle: - 125 + 'deg'
+						angle:( - 125 ) / 180 * Math.PI
 						distr: 0
 				3:
 					x: Math.max(
@@ -56,7 +56,7 @@ exports.glyphs['f'] =
 					typeIn: 'line'
 					expand:
 						width: ( 88 / 80 ) * thickness * contrast
-						angle: - 110 + 'deg'
+						angle:( - 110 ) / 180 * Math.PI
 						distr: 0
 		1:
 			skeleton: true
@@ -68,7 +68,7 @@ exports.glyphs['f'] =
 					typeOut: 'line'
 					expand:
 						width: ( 47 / 80 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 132 * width
@@ -76,7 +76,7 @@ exports.glyphs['f'] =
 					typeOut: 'line'
 					expand:
 						width: ( 47 / 80 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		2:
 			skeleton: false
@@ -85,7 +85,7 @@ exports.glyphs['f'] =
 				0:
 					x: contours[0].nodes[3].expandedTo[1].x
 					y: contours[0].nodes[3].expandedTo[1].y
-					dirOut: 155 + 'deg'
+					dirOut:( 155 ) / 180 * Math.PI
 					typeIn: 'line'
 				1:
 					x: Utils.onLine({
@@ -93,7 +93,7 @@ exports.glyphs['f'] =
 						on: [ contours[0].nodes[2].expandedTo[0], contours[0].nodes[2].expandedTo[1] ]
 					}) + 10
 					y: contours[2].nodes[0].y + 10
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					type: 'smooth'
 				2:
 					x: contours[0].nodes[1].expandedTo[1].x
@@ -101,21 +101,21 @@ exports.glyphs['f'] =
 						contours[0].nodes[1].expandedTo[1].y,
 						contours[2].nodes[0].y - 10
 					)
-					dirIn: 90 + 'deg'
-					dirOut: 90 + 'deg'
+					dirIn: Math.PI / 2
+					dirOut: Math.PI / 2
 					tensionOut: 0.8
 					tensionIn: 0.8
 				3:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					dirIn: 90 + 'deg'
-					dirOut: 90 + 'deg'
+					dirIn: Math.PI / 2
+					dirOut: Math.PI / 2
 					tensionOut: 0.8
 					tensionIn: 0.8
 				4:
 					x: contours[0].nodes[2].expandedTo[1].x
 					y: contours[0].nodes[2].expandedTo[1].y
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					typeOut: 'line'
 				5:
 					x: contours[0].nodes[2].expandedTo[0].x
@@ -129,7 +129,7 @@ exports.glyphs['f'] =
 				0:
 					x: contours[0].nodes[3].expandedTo[0].x
 					y: contours[0].nodes[3].expandedTo[0].y
-					dirOut: - 25 + 'deg'
+					dirOut:( - 25 ) / 180 * Math.PI
 					type: 'smooth'
 				1:
 					x: contours[0].nodes[3].expandedTo[0].x + 28
@@ -137,7 +137,7 @@ exports.glyphs['f'] =
 						contours[0].nodes[3].expandedTo[0].y - 28,
 						contours[3].nodes[3].y
 					)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 				2:
 					x: contours[3].nodes[1].x - 4
@@ -160,12 +160,12 @@ exports.glyphs['f'] =
 				5:
 					x: contours[0].nodes[3].expandedTo[1].x
 					y: contours[0].nodes[3].expandedTo[1].y
-					dirIn: - 25 + 'deg'
+					dirIn:( - 25 ) / 180 * Math.PI
 					typeOut: 'line'
 				6:
 					x: contours[0].nodes[2].expandedTo[0].x
 					y: contours[0].nodes[2].expandedTo[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 	components:
 		0:
 			base: ['serif-vertical', 'none']

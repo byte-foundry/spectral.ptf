@@ -5,7 +5,7 @@ exports.glyphs['G_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[4].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 70
@@ -50,25 +50,25 @@ exports.glyphs['G_cap'] =
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 355 / 570 )
 					y: capHeight + overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 50 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: spacingLeft + (23/80) * thickness * opticThickness
 					y: ( 310 / 660 ) * capHeight + (8)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					typeOut: 'smooth'
 					expand:
 						width: ( 98 / 80 ) * thickness * opticThickness
-						angle: 18 + 'deg'
+						angle:( 18 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 330 / 580 )
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					expand:
 						width: ( 65 / 80 ) * thickness * opticThickness * contrast
@@ -112,7 +112,7 @@ exports.glyphs['G_cap'] =
 					y: ( 290 / 660 ) * capHeight * crossbar
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0
 	components:
 		0:

@@ -5,7 +5,7 @@ exports.glyphs['J_sc'] =
 	base: 'J_cap'
 	advanceWidth: base.advanceWidth
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',

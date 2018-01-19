@@ -5,7 +5,7 @@ exports.glyphs['slash'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[1].x
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['slash'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 200
@@ -34,5 +34,5 @@ exports.glyphs['slash'] =
 					typeIn: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0

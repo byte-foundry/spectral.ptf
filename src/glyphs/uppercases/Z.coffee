@@ -5,7 +5,7 @@ exports.glyphs['Z_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 90
@@ -30,7 +30,7 @@ exports.glyphs['Z_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: spacingLeft + 18
@@ -38,7 +38,7 @@ exports.glyphs['Z_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				2:
 					x: Utils.onLine({
@@ -49,7 +49,7 @@ exports.glyphs['Z_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 25 / 80 ) * thickness * opticThickness * contrast
-						angle: 180 - 90 + 'deg'
+						angle:( 180 - 90 ) / 180 * Math.PI
 						distr: 1
 		1:
 			skeleton: true
@@ -61,7 +61,7 @@ exports.glyphs['Z_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x - 30
@@ -69,7 +69,7 @@ exports.glyphs['Z_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[1].nodes[1].x + 15
@@ -83,7 +83,7 @@ exports.glyphs['Z_cap'] =
 					typeOut: 'line'
 					expand:
 						width: if contours[1].nodes[2].y > capHeight then 0 else capHeight - contours[1].nodes[2].y
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 		2:
 			skeleton: true

@@ -16,7 +16,7 @@ exports.glyphs['stroke'] =
 					typeOut: 'line'
 					expand:
 						width: ( 66 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: anchors[0].right
@@ -24,5 +24,5 @@ exports.glyphs['stroke'] =
 					typeIn: 'line'
 					expand:
 						width: ( 66 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1

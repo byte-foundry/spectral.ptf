@@ -5,7 +5,7 @@ exports.glyphs['four'] =
 	ot:
 		advanceWidth: contours[0].nodes[2].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 8
@@ -26,7 +26,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 20 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: Utils.onLine({
@@ -37,7 +37,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 67 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				2:
 					x: contours[0].nodes[0].x + 280 + 200 * width
@@ -45,7 +45,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 67 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.25
 		1:
 			skeleton: true
@@ -57,7 +57,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 20 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 				1:
 					x: contours[1].nodes[2].expandedTo[0].x
@@ -68,7 +68,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 85 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				2:
 					x: contours[0].nodes[0].x + ( contours[0].nodes[2].x - contours[0].nodes[0].x ) * ( 340 / 480 )
@@ -76,7 +76,7 @@ exports.glyphs['four'] =
 					typeOut: 'line'
 					expand:
 						width: ( 85 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 		2:
 			skeleton: true

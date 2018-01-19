@@ -5,7 +5,7 @@ exports.glyphs['bullet'] =
 	ot:
 		advanceWidth: contours[0].nodes[3].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 130
@@ -33,7 +33,7 @@ exports.glyphs['bullet'] =
 				0:
 					x: anchors[0].x
 					y: anchors[0].y
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 				1:
 					x: anchors[0].x - Math.max(
@@ -50,7 +50,7 @@ exports.glyphs['bullet'] =
 							thickness * ( 240 / 80 )
 						)
 					) / 2
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 				2:
 					x: anchors[0].x
@@ -61,7 +61,7 @@ exports.glyphs['bullet'] =
 							thickness * ( 240 / 80 )
 						)
 					)
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 				3:
 					x: anchors[0].x + Math.max(
@@ -78,5 +78,5 @@ exports.glyphs['bullet'] =
 							thickness * ( 240 / 80 )
 						)
 					) / 2
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'

@@ -6,7 +6,7 @@ exports.glyphs['a'] =
 	ot:
 		advanceWidth: contours[0].nodes[5].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 50
@@ -52,13 +52,13 @@ exports.glyphs['a'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 177 / 321 )
 					y: xHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					tensionIn: 0.95
 					tensionOut: 1.1
 					expand:
 						width: ( 53 / 80 ) * thickness * contrast
-						angle: - 119 + 'deg'
+						angle:( - 119 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
@@ -66,11 +66,11 @@ exports.glyphs['a'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 83 / 80 ) * thickness + 10
 					)
 					y: xHeight - 100 - (5)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					typeOut: 'line'
 					expand:
 						width: ( 83 / 80 ) * thickness
-						angle: - 165 + 'deg'
+						angle:( - 165 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].expandedTo[1].x
@@ -78,16 +78,16 @@ exports.glyphs['a'] =
 						contours[0].nodes[4].y + Math.sin( 49 / 180 * Math.PI ) * ( 79 / 80 ) * thickness + 24,
 						contours[1].nodes[0].y
 					)
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 80 / 80 ) * thickness
-						angle: 180 - 5 + 'deg'
+						angle:( 180 - 5 ) / 180 * Math.PI
 						distr: 1
 				4:
 					x: contours[0].nodes[3].expandedTo[1].x + ( contours[0].nodes[5].expandedTo[0].x - contours[0].nodes[3].expandedTo[1].x ) * 0.5
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					expand:
 						# width: ( 79 / 80 ) * thickness * contrast
@@ -110,7 +110,7 @@ exports.glyphs['a'] =
 					)
 					expand:
 						width: ( 6 / 80 ) * thickness * contrast
-						angle: 180 + 120 + 'deg'
+						angle:( 180 + 120 ) / 180 * Math.PI
 						distr: 0
 		1:
 			skeleton: true
@@ -129,12 +129,12 @@ exports.glyphs['a'] =
 					tensionOut: 1.1
 					expand:
 						width: ( 26 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.1
 				1:
 					x: contours[1].nodes[2].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[1].nodes[2].expandedTo[0].x ) * ( 109 / 272 )
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						# width:
@@ -168,11 +168,11 @@ exports.glyphs['a'] =
 						contours[1].nodes[1].y + Math.sin( contours[1].nodes[1].expand.angle ) * contours[1].nodes[1].expand.width
 					)
 					y: contours[1].nodes[1].y + ( contours[1].nodes[3].expandedTo[0].y - contours[1].nodes[1].y ) * ( ( 94 + ( 10 / 80 ) * thickness ) / 275 )
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 80 / 80 ) * thickness
-						angle: 14 + 'deg'
+						angle:( 14 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[2].expandedTo[1].x ) * ( 32 / 80 )
@@ -184,7 +184,7 @@ exports.glyphs['a'] =
 					tensionIn: 1.1
 					expand:
 						width: ( 36 / 80 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0.25
 		2:
 			skeleton: false

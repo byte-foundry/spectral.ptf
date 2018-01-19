@@ -17,40 +17,40 @@ exports.glyphs['ring'] =
 				0:
 					x: anchors[0].x - ( 73 + ( 13 / 80 ) * thickness ) + (13/80) * thickness
 					y: contours[0].nodes[3].expandedTo[0].y + ( contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[3].expandedTo[0].y ) / 2 + (2/80) * thickness
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					tensionIn: 0.9
 					type: 'smooth'
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 8 + 'deg'
+						angle:( 8 ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: anchors[0].x
 					y: contours[0].nodes[3].expandedTo[0].y + ( 140 + ( 26 / 80 ) * thickness )
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 24 / 80 ) * thickness * contrast
-						angle: - 95 + 'deg'
+						angle:( - 95 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: anchors[0].x + ( 73 + ( 13 / 80 ) * thickness ) - (13/80) * thickness
 					y: contours[0].nodes[0].expandedTo[0].y
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					tensionOut: 0.9
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 190 + 'deg'
+						angle:( 190 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[1].x
 					y: anchors[0].y
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					tensionIn: 0.9
 					tensionOut: 0.9
 					type: 'smooth'
 					expand:
 						width: ( 24 / 80 ) * thickness * contrast
-						angle: 80 + 'deg'
+						angle:( 80 ) / 180 * Math.PI
 						distr: 0

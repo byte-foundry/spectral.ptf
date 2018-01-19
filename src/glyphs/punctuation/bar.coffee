@@ -5,7 +5,7 @@ exports.glyphs['bar'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['bar'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
@@ -34,5 +34,5 @@ exports.glyphs['bar'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

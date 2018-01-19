@@ -5,7 +5,7 @@ exports.glyphs['emdash'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 50
@@ -26,12 +26,12 @@ exports.glyphs['emdash'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x + 700 + 200 * width
 					y: contours[0].nodes[0].y
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5

@@ -7,7 +7,7 @@ exports.glyphs['W_cap'] =
 	ot:
 		advanceWidth: contours[4].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 15 + ( 55 / 65 ) * serifWidth
@@ -31,7 +31,7 @@ exports.glyphs['W_cap'] =
 							( 93 / 80 ) * thickness * opticThickness,
 							thickness * opticThickness / (- Math.sin(Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})))
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[1].nodes[1].expandedTo[0].x
@@ -51,7 +51,7 @@ exports.glyphs['W_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 65 / 80 ) * thickness * opticThickness * contrast
-						angle: 180 + 160 + 'deg'
+						angle:( 180 + 160 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x + ( contours[1].nodes[0].x - contours[0].nodes[0].x ) * ( 265 / 465 )
@@ -135,7 +135,7 @@ exports.glyphs['W_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 68 / 80 ) * thickness * opticThickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: contours[1].nodes[0].expandedTo[1].x + ( contours[4].nodes[0].expandedTo[0].x - contours[1].nodes[0].expandedTo[1].x ) * ( 260 / 460 )

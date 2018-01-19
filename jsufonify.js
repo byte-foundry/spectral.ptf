@@ -98,7 +98,6 @@ function addComponents( glyph ) {
 function linkToRelatedGlyphs(glyph, glyphsByName) {
 	var base = glyphsByName[glyph.base];
 
-	console.log(glyph.name);
 	base.relatedGlyphs = base.relatedGlyphs || [];
 	glyph.relatedGlyphs = glyph.relatedGlyphs || [];
 

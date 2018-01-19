@@ -6,7 +6,7 @@ exports.glyphs['v'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing  - 22 + ( 45 / 65 ) * serifWidth
@@ -27,7 +27,7 @@ exports.glyphs['v'] =
 					typeOut: 'line'
 					expand:
 						width: ( thickness ) / Math.sin( Math.PI - Utils.lineAngle( {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}, { x: contours[0].nodes[0].x - (0.25 * ( 90 / 80 ) * thickness), y: xHeight } ) )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[1].nodes[1].expandedTo[0].x
@@ -51,7 +51,7 @@ exports.glyphs['v'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: (spacingLeft + contours[0].nodes[0].expand.width * contrast) + ( contours[1].nodes[0].expandedTo[0].x - (spacingLeft + contours[0].nodes[0].expand.width * contrast) ) * 0.48

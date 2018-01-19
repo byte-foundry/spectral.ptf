@@ -17,7 +17,7 @@ exports.glyphs['ellipsis'] =
 			)
 		) + spacingRight ) + 75
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 65

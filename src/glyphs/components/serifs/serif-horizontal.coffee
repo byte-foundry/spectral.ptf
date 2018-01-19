@@ -23,7 +23,7 @@ exports.glyphs['serif-horizontal'] =
 		'component'
 	]
 	transformOrigin: Object({x: anchors[0].x - serifArc * serifHeight, y: anchors[1].y})
-	transforms: Array([ 'skewX', anchors[2].rotate + 'deg' ])
+	transforms: Array([ 'skewX',( anchors[2].rotate ) / 180 * Math.PI ])
 	contours:
 		0:
 			exportReversed: parentAnchors[0].reversed == true
@@ -32,7 +32,7 @@ exports.glyphs['serif-horizontal'] =
 				0:
 					y: anchors[0].y
 					x: anchors[0].x - ( serifHeight + serifCurve )
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					tensionOut: serifRoundness
 				1:
 					y: anchors[0].y + Math.max(
@@ -61,11 +61,11 @@ exports.glyphs['serif-horizontal'] =
 					x: anchors[0].x
 					type: 'smooth'
 					tensionIn: serifTerminalCurve
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 				5:
 					y: anchors[1].y
 					x: anchors[0].x - serifArc * serifHeight
-					dirIn: - 90 + 'deg'
+					dirIn:( - 90 ) / 180 * Math.PI
 					typeOut: 'line'
 				6:
 					y: contours[0].nodes[5].y

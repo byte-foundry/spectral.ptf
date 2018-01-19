@@ -5,7 +5,7 @@ exports.glyphs['ampersand'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 20
@@ -34,29 +34,29 @@ exports.glyphs['ampersand'] =
 						contours[0].nodes[3].expandedTo[0].x + 0.75 * ( 85 / 80 ) * thickness + 50
 					)
 					y: ( 542 / 660 ) * capHeight
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
 						width: ( 85 / 80 ) * thickness
-						angle: 3 + 'deg'
+						angle:( 3 ) / 180 * Math.PI
 						distr: 0.75
 				2:
 					x: ( contours[0].nodes[3].expandedTo[1].x + contours[0].nodes[1].expandedTo[1].x ) * ( 181 / 345 )
 					y: capHeight + overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 46 / 90 ) * thickness * contrast
-						angle: 180 - 100 + 'deg'
+						angle:( 180 - 100 ) / 180 * Math.PI
 						distr: 1
 				3:
 					x: contours[1].nodes[2].expandedTo[0].x + (57) + (22/80) * thickness
 					y: ( 514 / 660 ) * capHeight
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					typeIn: 'smooth'
 					expand:
 						width: ( 89 / 80 ) * thickness
-						angle: 180 + 11 + 'deg'
+						angle:( 180 + 11 ) / 180 * Math.PI
 						distr: 0.75
 				4:
 					x: 175 + 100 * width - 67
@@ -65,7 +65,7 @@ exports.glyphs['ampersand'] =
 					typeOut: 'line'
 					expand:
 						width: ( 95 / 80 ) * thickness
-						angle: 180 + 60 + 'deg'
+						angle:( 180 + 60 ) / 180 * Math.PI
 						distr: 1
 				5:
 					x: contours[1].nodes[2].x + 292 + 200 * width + (27)
@@ -73,7 +73,7 @@ exports.glyphs['ampersand'] =
 					typeIn: 'line'
 					expand:
 						width: (100 / 80) * thickness / Math.sin((Math.PI - Utils.lineAngle({x: contours[0].nodes[5].x, y: contours[0].nodes[5].y}, {x: contours[0].nodes[4].expandedTo[0].x, y: contours[0].nodes[4].expandedTo[0].y})))
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.75
 		1:
 			skeleton: true
@@ -85,12 +85,12 @@ exports.glyphs['ampersand'] =
 					dirOut: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[0].x, y: contours[1].nodes[0].expandedTo[0].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y}) + (20 / 180 * Math.PI)
 					expand:
 						width: ( 50 / 80 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				1:
 					x: ( contours[1].nodes[2].expandedTo[0].x + contours[1].nodes[0].expandedTo[0].x ) * ( 192 / 596 )
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					tensionIn: 1.6
 					expand:
@@ -104,11 +104,11 @@ exports.glyphs['ampersand'] =
 					x: spacingLeft + (23/80) * thickness
 					y: ( ( contours[1].nodes[1].y + Math.sin( contours[1].nodes[1].expand.angle ) * contours[1].nodes[1].expand.width ) + contours[1].nodes[3].expandedTo[1].y ) * ( 132 / 286 ) - (20)
 					y: ( ( contours[1].nodes[1].y + contours[1].nodes[1].expand.width ) + contours[1].nodes[3].expandedTo[1].y ) * ( 132 / 286 ) - (20)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					expand:
 						width: ( 95 / 80 ) * thickness
-						angle: 15 + 'deg'
+						angle:( 15 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: ( contours[0].nodes[4].expandedTo[0].x + contours[0].nodes[4].expandedTo[1].x ) / 2 - Math.min( 10, ( 10 / 80 ) * thickness )

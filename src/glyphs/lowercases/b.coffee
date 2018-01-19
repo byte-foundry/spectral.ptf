@@ -6,7 +6,7 @@ exports.glyphs['b'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40 + ( 60 / 65 ) * serifWidth
@@ -27,7 +27,7 @@ exports.glyphs['b'] =
 					typeOut: 'line'
 					expand:
 						width: ( 6 / 80 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: spacingLeft + (20/80) * thickness
@@ -35,14 +35,14 @@ exports.glyphs['b'] =
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[1].x
 					y: ascenderHeight - Math.max( 0, serifHeight * serifArc ) - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) )
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -68,11 +68,11 @@ exports.glyphs['b'] =
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * 0.5
 					y: xHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 88 / 80 ) * thickness * contrast
-						angle: - 130 + 'deg'
+						angle:( - 130 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: Math.max(
@@ -80,11 +80,11 @@ exports.glyphs['b'] =
 						contours[0].nodes[1].expandedTo[1].x + 0.75 * ( 83 / 80 ) * thickness + 10
 					)
 					y: ( 247 / 450 ) * xHeight + (0)
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 83 / 80 ) * thickness
-						angle: - 165 + 'deg'
+						angle:( - 165 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: Math.max(
@@ -92,11 +92,11 @@ exports.glyphs['b'] =
 						contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * ( 175 / 410 )
 					)
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 55 / 80 ) * thickness * contrast
-						angle: 61 + 'deg'
+						angle:( 61 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[0].nodes[1].expandedTo[1].x
@@ -110,7 +110,7 @@ exports.glyphs['b'] =
 							42,
 							( ( 90 - ( 13 + 35 * width) ) / 80 ) * thickness
 						)
-					) + 'deg'
+					) / 180 * Math.PI
 					# dirIn: - Math.min(
 					# 	contours[1].nodes[0].expand.angle + Math.PI / 2,
 					# 	Utils.lineAngle({x: contours[1].nodes[0].expandedTo[0].x, y: contours[1].nodes[0].expandedTo[0].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y}) + 30 / 180 * Math.PI

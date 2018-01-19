@@ -6,7 +6,7 @@ exports.glyphs['seven'] =
 	ot:
 		advanceWidth: contours[0].nodes[2].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 50
@@ -27,7 +27,7 @@ exports.glyphs['seven'] =
 					typeOut: 'line'
 					expand:
 						width: ( 77 / 80 ) * thickness * opticThickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
 					x: Math.min(
@@ -41,14 +41,14 @@ exports.glyphs['seven'] =
 					typeOut: 'line'
 					expand:
 						width: ( 77 / 80 ) * thickness * opticThickness
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: contours[0].nodes[0].x + 210 + 200 * width
 					y: capHeight
 					expand:
 						width: ( 20 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 		1:
 			skeleton: true
@@ -65,8 +65,8 @@ exports.glyphs['seven'] =
 				1:
 					x: contours[0].nodes[0].x + 30 * width + (87/80) * thickness
 					y: 0
-					dirIn: 100 - 10 * width + 'deg'
+					dirIn:( 100 - 10 * width ) / 180 * Math.PI
 					expand:
 						width: ( 112 / 80 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25

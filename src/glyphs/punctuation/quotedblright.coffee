@@ -5,7 +5,7 @@ exports.glyphs['quotedblright'] =
 	ot:
 		advanceWidth: contours[2].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 52
@@ -23,19 +23,19 @@ exports.glyphs['quotedblright'] =
 				0:
 					x: spacingLeft + 75
 					y: ascenderHeight
-					dirOut: 160 + 'deg'
+					dirOut:( 160 ) / 180 * Math.PI
 					expand:
 						width: ( 100 / 80 ) * minThickness
-						angle: 70 + 'deg'
+						angle:( 70 ) / 180 * Math.PI
 						distr: 1
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 16 + (12)
 					y: contours[0].nodes[2].expandedTo[0].y + ( contours[0].nodes[0].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y ) * ( 80 / 147 ) - (4)
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 75 / 80 ) * minThickness * contrast
-						angle: 37 + 'deg'
+						angle:( 37 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x - 37
@@ -43,7 +43,7 @@ exports.glyphs['quotedblright'] =
 					dirIn: Utils.lineAngle({x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y}, {x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y}) - (25 / 180 * Math.PI)
 					expand:
 						width: ( 20 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 		1:
 			skeleton: false
@@ -73,7 +73,7 @@ exports.glyphs['quotedblright'] =
 					x: contours[1].nodes[0].x + ( contours[1].nodes[5].x - contours[1].nodes[0].x ) * ( 7 / 35 )
 					y: contours[1].nodes[5].y + ( 7 / 80 ) * minThickness
 					tensionOut: 1.2
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 				5:
 					x: contours[0].nodes[0].expandedTo[1].x
@@ -87,19 +87,19 @@ exports.glyphs['quotedblright'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x + 75 + Math.min( ( 50 / 80 ) * thickness, 50 )
 					y: ascenderHeight
-					dirOut: 160 + 'deg'
+					dirOut:( 160 ) / 180 * Math.PI
 					expand:
 						width: ( 100 / 80 ) * minThickness
-						angle: 70 + 'deg'
+						angle:( 70 ) / 180 * Math.PI
 						distr: 1
 				1:
 					x: contours[2].nodes[0].expandedTo[1].x + 16 + (12)
 					y: contours[2].nodes[2].expandedTo[0].y + ( contours[2].nodes[0].expandedTo[0].y - contours[2].nodes[2].expandedTo[0].y ) * ( 80 / 147 ) - (4)
-					dirOut: - 90 + 'deg'
+					dirOut:( - 90 ) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 75 / 80 ) * minThickness * contrast
-						angle: 37 + 'deg'
+						angle:( 37 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: contours[2].nodes[0].expandedTo[0].x - 37
@@ -107,7 +107,7 @@ exports.glyphs['quotedblright'] =
 					dirIn: Utils.lineAngle({x: contours[2].nodes[2].expandedTo[0].x, y: contours[2].nodes[2].expandedTo[0].y}, {x: contours[2].nodes[1].expandedTo[0].x, y: contours[2].nodes[1].expandedTo[0].y}) - (25 / 180 * Math.PI)
 					expand:
 						width: ( 20 / 80 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 90 + 'deg'
+						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 		3:
 			skeleton: false
@@ -137,7 +137,7 @@ exports.glyphs['quotedblright'] =
 					x: contours[3].nodes[0].x + ( contours[3].nodes[5].x - contours[3].nodes[0].x ) * ( 7 / 35 )
 					y: contours[3].nodes[5].y + ( 7 / 80 ) * minThickness
 					tensionOut: 1.2
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 				5:
 					x: contours[2].nodes[0].expandedTo[1].x
