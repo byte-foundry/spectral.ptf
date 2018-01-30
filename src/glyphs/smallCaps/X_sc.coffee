@@ -1,9 +1,5 @@
 exports.glyphs['X_sc'] =
-	#
-	# TODO:
-	# LATIN LETTER SMALL CAPITAL X have no unicode for now…
-	#
-	unicode: 'x'
+	unicode: 61560
 	glyphName: 'xsmall'
 	characterName: 'LATIN LETTER SMALL CAPITAL X'
 	base: 'X_cap'

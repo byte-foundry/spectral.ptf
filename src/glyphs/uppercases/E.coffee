@@ -100,6 +100,7 @@ exports.glyphs['E_cap'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -111,6 +112,7 @@ exports.glyphs['E_cap'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]
@@ -127,6 +129,7 @@ exports.glyphs['E_cap'] =
 		2:
 			base: ['serif-horizontal', 'none']
 			id: 'toprightbottom'
+			class: 'upperRightInsideHoriz'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]
@@ -144,6 +147,7 @@ exports.glyphs['E_cap'] =
 		3:
 			base: ['serif-horizontal-fake', 'none', 'serif-horizontal']
 			id: 'toprighttop'
+			class: 'upperRightHoriz'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[0]
@@ -159,6 +163,7 @@ exports.glyphs['E_cap'] =
 		4:
 			base: ['serif-horizontal', 'none']
 			id: 'middlebottom'
+			class: 'middleUpperHoriz'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[1].expandedTo[1]
@@ -171,6 +176,7 @@ exports.glyphs['E_cap'] =
 		5:
 			base: ['serif-horizontal', 'none']
 			id: 'middletop'
+			class: 'middleLowerHoriz'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[1].expandedTo[0]

@@ -116,6 +116,7 @@ exports.glyphs['a_alt'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerRightStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]

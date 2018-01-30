@@ -1,4 +1,5 @@
 exports.glyphs['serif-oblique-acute'] =
+	componentLabel: 'Serif'
 	parameters:
 		serifHeight:
 			if serifWidth < 0.05

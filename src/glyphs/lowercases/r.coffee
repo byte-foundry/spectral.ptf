@@ -113,6 +113,7 @@ exports.glyphs['r'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -121,6 +122,7 @@ exports.glyphs['r'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerLeftInsideStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -136,6 +138,7 @@ exports.glyphs['r'] =
 		2:
 			base: ['spur-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftSpur'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]

@@ -1,4 +1,5 @@
 exports.glyphs['serif-vertical'] =
+	componentLabel: 'Serif'
 	parameters:
 		roundCorner: serifHeight # TODO: make a real param in controls.coffee
 		serifWidth:

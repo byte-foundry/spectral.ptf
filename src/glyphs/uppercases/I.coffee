@@ -43,6 +43,7 @@ exports.glyphs['I_cap'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -54,6 +55,7 @@ exports.glyphs['I_cap'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerRightStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -70,6 +72,7 @@ exports.glyphs['I_cap'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]
@@ -86,6 +89,7 @@ exports.glyphs['I_cap'] =
 		3:
 			base: ['serif-vertical', 'none']
 			id: 'topright'
+			class: 'upperRightStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1]

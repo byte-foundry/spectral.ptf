@@ -134,6 +134,7 @@ exports.glyphs['C_cap'] =
 		2:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'topbottom'
+			class: 'topInsideCurve'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[0].expandedTo[1]
@@ -154,6 +155,7 @@ exports.glyphs['C_cap'] =
 		3:
 			base: ['none', 'serif-curve-inside-auto']
 			id: 'toptop'
+			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[0].expandedTo[0]

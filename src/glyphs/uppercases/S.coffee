@@ -151,6 +151,7 @@ exports.glyphs['S_cap'] =
 		0:
 			base: ['none', 'serif-curve-inside-auto']
 			id: 'toptop'
+			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[6].expandedTo[1]
@@ -163,6 +164,7 @@ exports.glyphs['S_cap'] =
 		1:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'topbottom'
+			class: 'topInsideCurve'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[6].expandedTo[0]
@@ -183,6 +185,7 @@ exports.glyphs['S_cap'] =
 		2:
 			base: ['none', 'serif-curve-inside-auto']
 			id: 'bottombottom'
+			class: 'bottomOutsideCurve'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[0].expandedTo[0]
@@ -197,6 +200,7 @@ exports.glyphs['S_cap'] =
 		3:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottomtop'
+			class: 'bottomInsideCurve'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[0].expandedTo[1]

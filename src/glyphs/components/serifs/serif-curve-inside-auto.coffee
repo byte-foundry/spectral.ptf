@@ -1,4 +1,5 @@
 exports.glyphs['serif-curve-inside-auto'] =
+	componentLabel: 'Serif'
 	anchors:
 		0:
 			serif: Utils.makeCurveInsideSerif(
@@ -32,9 +33,8 @@ exports.glyphs['serif-curve-inside-auto'] =
 					x: anchors[0].point0.x
 					y: anchors[0].point0.y
 					dirOut: anchors[0].point0.dirOut
-					type: anchors[0].point0.type
+					typeIn: 'line'
 					typeOut: anchors[0].point0.typeOut
-					dirIn: anchors[0].point0.dirIn
 				1:
 					x: anchors[0].point1.x
 					y: anchors[0].point1.y
@@ -85,5 +85,5 @@ exports.glyphs['serif-curve-inside-auto'] =
 					type: 'corner'
 					dirIn: anchors[0].point8.dirIn
 					dirOut: anchors[0].point8.dirIn
-					typeOut: anchors[0].point8.typeOut
+					typeOut: 'line'
 					tensionIn: anchors[0].point8.tensionIn

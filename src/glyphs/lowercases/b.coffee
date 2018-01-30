@@ -123,6 +123,7 @@ exports.glyphs['b'] =
 		0:
 			base: ['spur-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftSpur'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[2].expandedTo[0]

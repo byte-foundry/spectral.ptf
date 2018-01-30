@@ -1,4 +1,5 @@
 exports.glyphs['serif-horizontal'] =
+	componentLabel: 'Serif'
 	parameters:
 		serifHeight:
 			if serifWidth < 0.05

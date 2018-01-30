@@ -1,4 +1,5 @@
 exports.glyphs['spur-vertical'] =
+	componentLabel: 'Spur'
 	parameters:
 		roundCorner: serifHeight # TODO: make a real param in controls.coffee
 		serifWidth:

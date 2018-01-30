@@ -120,6 +120,7 @@ exports.glyphs['s'] =
 		0:
 			base: ['none', 'serif-curve-inside-auto']
 			id: 'toptop'
+			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
 					baseDir: contours[0].nodes[6].dirIn
@@ -133,6 +134,7 @@ exports.glyphs['s'] =
 		1:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'topbottom'
+			class: 'topInsideCurve'
 			parentAnchors:
 				0:
 					baseDir: contours[0].nodes[6].dirIn
@@ -152,6 +154,7 @@ exports.glyphs['s'] =
 		2:
 			base: ['none', 'serif-curve-inside-auto']
 			id: 'bottombottom'
+			class: 'bottomOutsideCurve'
 			parentAnchors:
 				0:
 					baseDir: contours[0].nodes[0].dirOut
@@ -167,6 +170,7 @@ exports.glyphs['s'] =
 		3:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottomtop'
+			class: 'bottomInsideCurve'
 			parentAnchors:
 				0:
 					baseDir: contours[0].nodes[0].dirOut
