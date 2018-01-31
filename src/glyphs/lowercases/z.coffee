@@ -116,6 +116,7 @@ exports.glyphs['z'] =
 		0:
 			base: ['serif-horizontal', 'none']
 			id: 'topleftbottom'
+			class: 'ZTopBottom'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1]
@@ -133,6 +134,7 @@ exports.glyphs['z'] =
 		1:
 			base: ['serif-horizontal', 'none']
 			id: 'toplefttop'
+			class: 'ZTopTop'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[0]
@@ -151,6 +153,7 @@ exports.glyphs['z'] =
 		2:
 			base: ['serif-horizontal', 'none']
 			id: 'bottomrighttop'
+			class: 'ZBottomTop'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -166,6 +169,7 @@ exports.glyphs['z'] =
 		3:
 			base: ['none', 'serif-horizontal']
 			id: 'bottomrightbottom'
+			class: 'ZBottomBottom'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
