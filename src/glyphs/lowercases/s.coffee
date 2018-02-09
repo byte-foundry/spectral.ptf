@@ -114,7 +114,7 @@ exports.glyphs['s'] =
 					dirIn:( 150 ) / 180 * Math.PI
 					expand:
 						width: ( 50 / 80 ) * thickness * contrast * contrastExtremity
-						angle:( 180 - 91 ) / 180 * Math.PI
+						angle:( 180 - 94 ) / 180 * Math.PI
 						distr: 0.9
 	components:
 		0:

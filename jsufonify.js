@@ -158,6 +158,7 @@ function jsufonify(/*prefixText*/free) {
 					(glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
 					(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
 			});
+			font.glyphs = _.pickBy(font.glyphs, glyph => glyph);
 		}
 
 		// WIP: convert ptf object to jsufon

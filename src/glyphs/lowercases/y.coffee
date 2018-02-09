@@ -62,7 +62,7 @@ exports.glyphs['y'] =
 						distr: 0.75
 				1:
 					x: (spacingLeft + contours[0].nodes[0].expand.width * contrast) + ( contours[1].nodes[0].expandedTo[0].x - (spacingLeft + contours[0].nodes[0].expand.width * contrast) ) * 0.48 - (22)
-					x: (spacingLeft) + ( contours[1].nodes[0].expandedTo[0].x - (spacingLeft) ) * 0.48 - (22)
+					x: contours[0].nodes[0].x * 0.52 + contours[1].nodes[0].x * 0.48
 					y: ( ( 100 - ( 20 / 80 ) * thickness) / 250 ) * descender
 					dirOut: Utils.lineAngle({x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y: contours[1].nodes[1].y})
 					tensionOut: 1.2

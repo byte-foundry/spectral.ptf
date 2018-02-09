@@ -15,12 +15,13 @@ gulp.task('clean-dist', function() {
 		.pipe($.rimraf());
 });
 
-gulp.task('build:free', ['copy'], function() {
+gulp.task('build:free', function() {
 	return gulp.src('src/**/*.coffee')
 		.pipe($.coffee({bare: true}).on('error', $.util.log))
 		.pipe(operation())
 		.pipe($.concat('font_free.json'))
 		.pipe(jsufon(true))
+		.pipe(bakeOpOrder())
 		.pipe(gulp.dest('dist/'));
 });
 

@@ -54,8 +54,7 @@ exports.glyphs['v'] =
 						angle: 0
 						distr: 0.75
 				1:
-					x: (spacingLeft + contours[0].nodes[0].expand.width * contrast) + ( contours[1].nodes[0].expandedTo[0].x - (spacingLeft + contours[0].nodes[0].expand.width * contrast) ) * 0.48
-					x: (spacingLeft) + ( contours[1].nodes[0].expandedTo[0].x - (spacingLeft) ) * 0.48
+					x: contours[1].nodes[0].x * 0.52 + contours[0].nodes[0].x * 0.48
 					y: 0
 					typeIn: 'line'
 					expand:

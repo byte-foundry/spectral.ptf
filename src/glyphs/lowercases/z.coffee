@@ -38,6 +38,7 @@ exports.glyphs['z'] =
 					x: spacingLeft + 18
 					y: 0
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 45 / 80 ) * thickness * contrast
 						angle: Math.PI / 2
@@ -49,6 +50,7 @@ exports.glyphs['z'] =
 					})
 					y: ( 18 / 80 ) * thickness * contrast
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 18 / 80 ) * thickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
@@ -69,6 +71,7 @@ exports.glyphs['z'] =
 					x: contours[0].nodes[0].x - 26
 					y: contours[1].nodes[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 45 / 80 ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
@@ -83,6 +86,7 @@ exports.glyphs['z'] =
 						xHeight
 					)
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: if contours[1].nodes[2].y > xHeight then 0 else xHeight - contours[1].nodes[2].y
 						angle:( 180 + 90 ) / 180 * Math.PI
@@ -105,6 +109,7 @@ exports.glyphs['z'] =
 				1:
 					x: contours[1].nodes[1].expandedTo[1].x
 					y: contours[1].nodes[1].expandedTo[1].y
+					typeIn: 'line'
 					expand:
 						width: ( 80 / 80 ) * thickness
 						angle: Math.max(

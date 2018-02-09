@@ -56,7 +56,7 @@ exports.glyphs['V_cap'] =
 						angle: 0
 						distr: 0.75
 				1:
-					x: (spacingLeft) + ( contours[1].nodes[0].expandedTo[0].x - (spacingLeft) ) * 0.51
+					x: contours[1].nodes[0].x * 0.52 + contours[0].nodes[0].x * 0.48
 					y: - overshoot / 2
 					typeIn: 'line'
 					expand:

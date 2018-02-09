@@ -91,7 +91,7 @@ exports.glyphs['d'] =
 					x: contours[1].nodes[2].expandedTo[0].x + ( contours[1].nodes[4].expandedTo[0].x - contours[1].nodes[2].expandedTo[0].x ) * ( 240 / 390 )
 					y: xHeight + overshoot
 					dirOut: 0
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 50 / 80 ) * thickness * contrast
 						angle:( - 105 ) / 180 * Math.PI
@@ -107,8 +107,6 @@ exports.glyphs['d'] =
 						contours[1].nodes[4].expand.angle + Math.PI / 2 - 10 / 180 * Math.PI,
 						Utils.lineAngle({x: contours[1].nodes[4].expandedTo[1].x, y: contours[1].nodes[4].expandedTo[1].y}, {x: contours[1].nodes[3].expandedTo[1].x, y: contours[1].nodes[3].expandedTo[1].y})
 					)
-					dirIn: Utils.lineAngle({x: contours[1].nodes[4].expandedTo[1].x, y: contours[1].nodes[4].expandedTo[1].y}, {x: contours[1].nodes[3].expandedTo[1].x, y: contours[1].nodes[3].expandedTo[1].y}) - 10 / 180 * Math.PI
-					type: 'smooth'
 					expand:
 						width: ( 87 / 80 ) * thickness * contrast * contrastExtremity
 						angle: Utils.lineAngle({x: contours[1].nodes[4].x, y: contours[1].nodes[4].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y})

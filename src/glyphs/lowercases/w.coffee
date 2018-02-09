@@ -42,7 +42,7 @@ exports.glyphs['w'] =
 			nodes:
 				0:
 					# x: (spacingLeft + (22/80) * thickness - 0.25 * contours[0].nodes[0].expand.width) + ( ((spacingLeft + (22/80) * thickness - 0.25 * contours[0].nodes[0].expand.width) + 495 + 200 * width - (15) - 0.25 * ( 50 / 80 ) * thickness * contrast) - (spacingLeft + (22/80) * thickness - 0.25 * contours[0].nodes[0].expand.width) ) * ( 358 / 697 )
-					x: (spacingLeft + (22/80) * thickness) + ( ((spacingLeft + (22/80) * thickness) + 495 + 200 * width - (15) - 0.25 * ( 50 / 80 ) * thickness * contrast) - (spacingLeft + (22/80) * thickness) ) * ( 358 / 697 )
+					x: (spacingLeft + (22/80) * thickness - 25) + ( ((spacingLeft + (22/80) * thickness) + 495 + 200 * width - (15) - 0.25 * ( 50 / 80 ) * thickness * contrast) - (spacingLeft + (22/80) * thickness) ) * ( 358 / 697 )
 					y: Math.max(
 						xHeight - 12,
 						xHeight - ( 12 / 80 ) * thickness
@@ -56,7 +56,7 @@ exports.glyphs['w'] =
 						) / 180 * Math.PI
 						distr: 0
 				1:
-					x: (spacingLeft) + ( contours[1].nodes[0].expandedTo[0].x) * 0.5 - contours[1].nodes[1].expand.width + (4)
+					x: (contours[1].nodes[0].x + contours[0].nodes[0].x) / 2 + 4
 					y: 0
 					typeIn: 'line'
 					expand:
@@ -105,8 +105,8 @@ exports.glyphs['w'] =
 					y: contours[4].nodes[1].expandedTo[0].y
 					typeIn: 'line'
 					expand:
-						width: ( 30 / 80 ) * thickness * contrast
-						angle: Utils.lineAngle({x: contours[4].nodes[0].expandedTo[0].x, y: contours[4].nodes[0].expandedTo[0].y}, {x: contours[3].nodes[1].x, y: contours[3].nodes[1].y})
+						width: contours[0].nodes[1].expand.width
+						angle: Utils.lineAngle({x: contours[4].nodes[0].expandedTo[0].x, y: contours[4].nodes[0].expandedTo[0].y}, {x: contours[3].nodes[1].x, y: contours[3].nodes[1].y}) + Math.PI
 						distr: 0
 		4:
 			skeleton: true

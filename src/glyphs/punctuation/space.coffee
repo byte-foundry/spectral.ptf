@@ -3,18 +3,15 @@ exports.glyphs['space'] =
 	glyphName: 'space'
 	characterName: 'SPACE'
 	ot:
-		advanceWidth: 200 + 50 * width
-	transforms: Array(
-		['skewX',( slant ) / 180 * Math.PI]
-	)
+		advanceWidth: 198 + 50 * width
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + 0
-		spacingRight: 50 * spacing + 0
+		spacingLeft: 50 * spacing + 1
+		spacingRight: 50 * spacing + 1
 	contours:
 		0:
 			skeleton: false
