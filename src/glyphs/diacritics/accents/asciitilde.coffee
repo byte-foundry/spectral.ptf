@@ -3,7 +3,7 @@ exports.glyphs['asciitilde'] =
 	glyphName: 'asciitilde'
 	characterName: 'TILDE'
 	ot:
-		advanceWidth: contours[0].nodes[0].x + 125 * width + spacingRight
+		advanceWidth: spacingLeft + 250 * width + spacingRight
 	parameters:
 		spacingLeft: 50 * spacing + 45
 		spacingRight: 50 * spacing + 45
@@ -15,14 +15,8 @@ exports.glyphs['asciitilde'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].x
-			y: contours[0].nodes[0].y
-	contours:
-		0:
-			nodes:
-				0:
-					x: spacingLeft + 125 * width
-					y: xHeight / 2
+			x: spacingLeft + 125 * width
+			y: xHeight / 2
 	components:
 		0:
 			base: 'tilde'
