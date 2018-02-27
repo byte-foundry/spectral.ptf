@@ -5,6 +5,7 @@ exports.fontinfo =
 	tags: [
 		'all',
 		'latin',
+		'cyrillic',
 		'lowercase',
 		'uppercase',
 		'punctuation',
