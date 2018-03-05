@@ -194,6 +194,7 @@ exports.glyphs['a'] =
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].expandedTo[0].y
 					dirOut: contours[0].nodes[0].dirOut + Math.PI
+					typeIn: 'line'
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].expandedTo[0].y - ( 28 / 80 ) * thickness * contrast * contrastExtremity
@@ -206,6 +207,7 @@ exports.glyphs['a'] =
 						contours[0].nodes[0].expandedTo[1].y
 					)
 					typeOut: 'line'
+					typeIn: 'line'
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: Math.min(
@@ -213,7 +215,9 @@ exports.glyphs['a'] =
 						contours[0].nodes[0].expandedTo[1].y
 					)
 					typeOut: 'line'
+					typeIn: 'line'
 				4:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: contours[0].nodes[0].expandedTo[1].y
 					typeOut: 'line'
+					typeIn: 'line'

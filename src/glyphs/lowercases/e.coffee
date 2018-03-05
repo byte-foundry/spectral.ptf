@@ -172,11 +172,14 @@ exports.glyphs['e'] =
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[1].nodes[0].expandedTo[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 				1:
 					x: contours[0].nodes[4].expandedTo[0].x
 					y: contours[0].nodes[4].expandedTo[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[4].expandedTo[0].y
 					typeOut: 'line'
+					typeIn: 'line'

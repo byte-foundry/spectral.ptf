@@ -96,7 +96,7 @@ exports.glyphs['c'] =
 						contours[0].nodes[2].expandedTo[1].x + ( 72 / 80 ) * thickness + 10
 					)
 					y: xHeight - 65 - (4)
-					dirIn: Math.PI / 2
+					typeIn: 'line'
 					expand:
 						width: ( ( 41 + 40 * contrast ) / 80 ) * thickness
 						angle:( - 137 ) / 180 * Math.PI
@@ -136,12 +136,12 @@ exports.glyphs['c'] =
 					x: contours[0].nodes[4].expandedTo[0].x
 					y: contours[0].nodes[4].expandedTo[0].y
 					dirOut: Utils.lineAngle({x: contours[0].nodes[4].expandedTo[1].x, y: contours[0].nodes[4].expandedTo[1].y}, {x: contours[0].nodes[5].expandedTo[1].x, y: contours[0].nodes[5].expandedTo[1].y})
+					typeIn: 'line'
 				1:
 					x: contours[0].nodes[5].expandedTo[0].x
 					y: contours[0].nodes[5].expandedTo[0].y
 					dirIn: Math.PI / 2
-					dirOut:( - 90 ) / 180 * Math.PI
-					type: 'smooth'
+					typeOut: 'smooth'
 				2:
 					x: Math.min(
 						contours[0].nodes[4].expandedTo[0].x + ( contours[0].nodes[5].expandedTo[0].x - contours[0].nodes[4].expandedTo[0].x ) * ( 3 / 16 ),
@@ -157,7 +157,9 @@ exports.glyphs['c'] =
 					x: contours[0].nodes[5].expandedTo[1].x + Math.min( 7, ( 7 / 80 ) * thickness )
 					y: contours[0].nodes[5].expandedTo[1].y
 					typeOut: 'line'
+					typeIn: 'line'
 				4:
 					x: contours[0].nodes[5].expandedTo[1].x
 					y: contours[0].nodes[5].expandedTo[1].y
 					typeOut: 'line'
+					typeIn: 'line'

@@ -168,6 +168,7 @@ exports.glyphs['g'] =
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + 60
 					y: xHeight
+					typeIn: 'line'
 					expand:
 						width: ( 54 / 80 ) * thickness * contrast
 						angle:( - 90 ) / 180 * Math.PI

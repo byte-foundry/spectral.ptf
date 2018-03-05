@@ -20,7 +20,7 @@ exports.glyphs['breve'] =
 						contours[0].nodes[1].expandedTo[0].y + 100,
 						contours[0].nodes[1].expandedTo[1].y + ( 157 + ( 10 / 80 ) * thickness )
 					)
-					dirOut: - 90 + Math.max( 0,( Math.min( 25, 18 * width ) ) ) / 180 * Math.PI
+					dirOut: (- 90 + Math.max( 0,( Math.min( 25, 18 * width ) ) )) / 180 * Math.PI
 					tensionOut: 1.2
 					expand:
 						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity
@@ -30,7 +30,7 @@ exports.glyphs['breve'] =
 					x: anchors[0].x
 					y: anchors[0].y + 30
 					dirOut: 0
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.2
 					tensionOut: 1.2
 					expand:
@@ -40,7 +40,7 @@ exports.glyphs['breve'] =
 				2:
 					x: anchors[0].x + ( anchors[0].x - contours[0].nodes[0].expandedTo[1].x )
 					y: contours[0].nodes[0].expandedTo[1].y
-					dirIn: - 90 - Math.max( 0,( Math.min( 25, 18 * width ) ) ) / 180 * Math.PI
+					dirIn: (- 90 - Math.max( 0,( Math.min( 25, 18 * width ) ) )) / 180 * Math.PI
 					tensionIn: 1.2
 					expand:
 						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity

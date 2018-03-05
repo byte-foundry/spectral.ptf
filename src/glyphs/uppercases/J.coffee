@@ -56,24 +56,28 @@ exports.glyphs['J_cap'] =
 				0:
 					x: contours[0].nodes[2].expandedTo[1].x
 					y: contours[0].nodes[2].expandedTo[1].y
+					typeIn: 'line'
 					dirOut: Math.PI
 				1:
 					x: contours[0].nodes[2].expandedTo[1].x - ( 33 / 80 ) * thickness * opticThickness
 					y: contours[0].nodes[2].expandedTo[1].y + ( contours[0].nodes[2].expandedTo[0].y - contours[0].nodes[2].expandedTo[1].y ) * ( 28 / 80 )
 					dirOut: Math.PI / 2
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionOut: 0.1
 				2:
 					x: contours[1].nodes[1].x + ( 10 / 80 ) * thickness * opticThickness
 					y: contours[0].nodes[2].expandedTo[0].y + ( 9 / 80 ) * thickness * opticThickness
 					typeOut: 'line'
+					typeIn: 'line'
 				3:
 					x: contours[1].nodes[2].x + 6
 					y: contours[1].nodes[2].y
+					typeIn: 'line'
 					dirOut:( - 15 ) / 180 * Math.PI
 				4:
 					x: contours[0].nodes[2].expandedTo[0].x
 					y: contours[0].nodes[2].expandedTo[0].y
+					typeIn: 'line'
 					typeOut: 'line'
 	components:
 		0:

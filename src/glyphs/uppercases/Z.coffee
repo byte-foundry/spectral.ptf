@@ -36,6 +36,7 @@ exports.glyphs['Z_cap'] =
 					x: spacingLeft + 18
 					y: 0
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -46,7 +47,7 @@ exports.glyphs['Z_cap'] =
 						on: [ contours[2].nodes[0].expandedTo[0], contours[2].nodes[1].expandedTo[0] ]
 					})
 					y: ( 25 / 80 ) * thickness * opticThickness * contrast
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 25 / 80 ) * thickness * opticThickness * contrast
 						angle:( 180 - 90 ) / 180 * Math.PI
@@ -67,6 +68,7 @@ exports.glyphs['Z_cap'] =
 					x: contours[0].nodes[0].x - 30
 					y: contours[1].nodes[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
@@ -80,7 +82,7 @@ exports.glyphs['Z_cap'] =
 						}),
 						capHeight
 					)
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: if contours[1].nodes[2].y > capHeight then 0 else capHeight - contours[1].nodes[2].y
 						angle:( 180 + 90 ) / 180 * Math.PI

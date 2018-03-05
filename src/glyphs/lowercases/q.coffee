@@ -96,7 +96,6 @@ exports.glyphs['q'] =
 					x: contours[0].nodes[1].expandedTo[0].x + ( 60 / 80 ) * thickness
 					y: xHeight - ( 20 / 450 ) * xHeight
 					dirIn:( 140 ) / 180 * Math.PI
-					type: 'smooth'
 					expand:
 						width: ( 87 / 80 ) * thickness * contrast * contrastExtremity
 						angle: Math.min(

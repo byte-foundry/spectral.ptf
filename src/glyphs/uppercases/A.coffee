@@ -73,6 +73,7 @@ exports.glyphs['A_cap'] =
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 				1:
 					x: Utils.onLine({
 						y: contours[0].nodes[1].expandedTo[0].y
@@ -80,14 +81,17 @@ exports.glyphs['A_cap'] =
 					})
 					y: contours[0].nodes[1].expandedTo[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[1].nodes[0].expandedTo[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 				3:
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].expandedTo[1].y
 					typeOut: 'line'
+					typeIn: 'line'
 		3:
 			skeleton: true
 			closed: false
@@ -96,7 +100,7 @@ exports.glyphs['A_cap'] =
 					x: Utils.onLine({
 						y: ( 290 / 660 ) * capHeight * crossbar - contours[3].nodes[0].expand.width * 1.3
 						on: [ contours[1].nodes[0].expandedTo[1], contours[1].nodes[1].expandedTo[1] ]
-					})
+					}) - 1
 					y: ( 290 / 660 ) * capHeight * crossbar - contours[3].nodes[0].expand.width * 1.3
 					typeOut: 'line'
 					expand:

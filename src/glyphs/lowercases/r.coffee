@@ -50,8 +50,7 @@ exports.glyphs['r'] =
 						contours[1].nodes[1].expandedTo[0].y - Math.tan( ( Math.PI - contours[1].nodes[1].dirOut ) ) * 38,
 						contours[1].nodes[1].expandedTo[1].y - ( 95 / 80 ) * thickness
 					)
-					# typeOut: 'line'
-					dirOut: Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y})
+					typeOut: 'line'
 					expand:
 						width: ( 74 / 80 ) * thickness
 						angle:( 180 - 116 ) / 180 * Math.PI
@@ -100,15 +99,17 @@ exports.glyphs['r'] =
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].expandedTo[1].y
 					dirIn: Math.PI / 2
-					type: 'smooth'
+					typeOut: 'smooth'
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x + 7
 					y: contours[1].nodes[0].expandedTo[0].y
 					dirIn: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[0].x, y: contours[1].nodes[0].expandedTo[0].y}, {x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y})
+					typeOut: 'line'
 				3:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[1].nodes[0].expandedTo[0].y
 					typeIn: 'line'
+					typeOut: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']

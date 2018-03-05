@@ -155,7 +155,6 @@ exports.glyphs['N_cap'] =
 			transformOrigin: contours[0].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'scaleX', -1 ]
 			)
 			parameters:
 				serifWidth: Math.min( ( 75 / 65 ) * serifWidth, serifWidth + 10 )

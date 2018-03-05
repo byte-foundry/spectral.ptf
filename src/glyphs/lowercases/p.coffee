@@ -36,6 +36,7 @@ exports.glyphs['p'] =
 						xHeight + overshoot - serifHeight
 					)
 					y: contours[1].nodes[0].expandedTo[0].y
+					typeIn: 'line'
 					typeOut: 'line'
 					expand:
 						width: ( 80 / 80 ) * thickness
@@ -48,6 +49,7 @@ exports.glyphs['p'] =
 					# 	xHeight + overshoot - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) ),
 					# 	xHeight + overshoot - serifHeight
 					# )
+					typeIn: 'line'
 					expand:
 						width: ( 20 / 80 ) * thickness
 						angle: 0

@@ -130,7 +130,7 @@ exports.glyphs['f'] =
 					x: contours[0].nodes[3].expandedTo[0].x
 					y: contours[0].nodes[3].expandedTo[0].y
 					dirOut:( - 25 ) / 180 * Math.PI
-					type: 'smooth'
+					typeIn: 'line'
 				1:
 					x: contours[0].nodes[3].expandedTo[0].x + 28
 					y: Math.max(
@@ -138,7 +138,7 @@ exports.glyphs['f'] =
 						contours[3].nodes[3].y
 					)
 					dirIn: Math.PI / 2
-					type: 'smooth'
+					typeOut: 'smooth'
 				2:
 					x: contours[3].nodes[1].x - 4
 					y: contours[3].nodes[1].y - 18
@@ -147,16 +147,17 @@ exports.glyphs['f'] =
 						contours[3].nodes[3].y
 					)
 					typeOut: 'line'
-					type: 'smooth'
+					typeIn: 'smooth'
 				3:
 					x: contours[0].nodes[3].expandedTo[1].x + 34
 					y: contours[0].nodes[3].expandedTo[1].y - 11
 					typeOut: 'line'
+					typeIn: 'line'
 				4:
 					x: contours[3].nodes[3].x - 7
 					y: contours[3].nodes[3].y
 					typeOut: 'line'
-					type: 'smooth'
+					typeIn: 'line'
 				5:
 					x: contours[0].nodes[3].expandedTo[1].x
 					y: contours[0].nodes[3].expandedTo[1].y
@@ -166,6 +167,7 @@ exports.glyphs['f'] =
 					x: contours[0].nodes[2].expandedTo[0].x
 					y: contours[0].nodes[2].expandedTo[0].y
 					dirOut: 0
+					typeIn: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']
