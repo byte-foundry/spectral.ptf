@@ -1,6 +1,6 @@
-exports.glyphs['breve'] =
-	glyphName: 'breve'
-	characterName: 'BREVE ACCENT'
+exports.glyphs['breve_cyr'] =
+	glyphName: 'breve_cyr'
+	characterName: 'BREVE ACCENT CYRILLIC'
 	anchors:
 		0:
 			x: parentAnchors[0].x
@@ -17,13 +17,12 @@ exports.glyphs['breve'] =
 				0:
 					x: anchors[0].x - 126 * width - ( 20 / 80 ) * thickness
 					y: Math.min(
-						contours[0].nodes[1].expandedTo[0].y + 100,
+						contours[0].nodes[1].expandedTo[0].y + 130,
 						contours[0].nodes[1].expandedTo[1].y + ( 157 + ( 10 / 80 ) * thickness )
 					)
-					dirOut: (- 90 + Math.max( 0,( Math.min( 25, 18 * width ) ) )) / 180 * Math.PI
-					tensionOut: 1.2
+					dirOut: - Math.PI / 2
 					expand:
-						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity * 6
 						angle: Math.PI
 						distr: 0.75
 				1:
@@ -34,15 +33,14 @@ exports.glyphs['breve'] =
 					tensionIn: 1.2
 					tensionOut: 1.2
 					expand:
-						width: ( 67 / 80 ) * thickness
+						width: ( 67 / 80 ) * thickness * 0.6
 						angle:( 180 + 90 ) / 180 * Math.PI
 						distr: 1
 				2:
 					x: anchors[0].x + ( anchors[0].x - contours[0].nodes[0].expandedTo[1].x )
 					y: contours[0].nodes[0].expandedTo[1].y
-					dirIn: (- 90 - Math.max( 0,( Math.min( 25, 18 * width ) ) )) / 180 * Math.PI
-					tensionIn: 1.2
+					dirIn: - Math.PI / 2
 					expand:
-						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity * 6
 						angle: 0
 						distr: 1

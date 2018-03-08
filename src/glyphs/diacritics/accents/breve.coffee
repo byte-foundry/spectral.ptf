@@ -25,3 +25,4 @@ exports.glyphs['breve_glyph'] =
 				0:
 					x: parentAnchors[0].x
 					y: parentAnchors[0].y
+					contrast_breve: parentAnchors[0].contrast_breve

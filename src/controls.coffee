@@ -130,7 +130,7 @@ exports.controls = [
 		step: 0.01
 		init: 1
 		minAdvised: 0.85
-		maxAdvised: 1.3
+		maxAdvised: 1.6
 		disabled: false
 		demo: false
 	,
