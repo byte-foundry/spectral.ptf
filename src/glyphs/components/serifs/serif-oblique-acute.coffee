@@ -55,9 +55,9 @@ exports.glyphs['serif-oblique-acute'] =
 						on: [ parentAnchors[0].base, parentAnchors[0].obliqueEndPoint ]
 					}) - Math.abs( Math.max(
 						( contours[0].nodes[2].x - Utils.onLine({
-							y: anchors[0].y + serifHeight * serifMedian
+							y: anchors[0].y + serifHeight
 							on: [ parentAnchors[0].base, parentAnchors[0].obliqueEndPoint ]
-						}) ) * 0.85 * anchors[3].scaleX,
+						}) ) * 0.85 * anchors[3].scaleX
 						- Math.abs( contours[0].nodes[0].y - ( anchors[0].y + serifHeight ) )
 					) ) * anchors[3].scaleX
 					y: anchors[0].y + serifHeight - ( Math.max(0, (contours[0].nodes[1].x - Utils.onLine({
@@ -83,8 +83,8 @@ exports.glyphs['serif-oblique-acute'] =
 					type: 'smooth'
 					tensionOut: serifTerminalCurve
 				3:
-					x: contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) * anchors[3].scaleX ) * ( serifMedian - 1 ) ) - serifTerminal * serifHeight * anchors[3].scaleX
-					y: contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) * anchors[3].scaleX ) * ( serifMedian - 1 ) )
+					x: contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5
+					y: contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * 0.5
 					dirOut: Utils.lineAngle({x: contours[0].nodes[2].x, y: contours[0].nodes[2].y},{x: contours[0].nodes[4].x, y: contours[0].nodes[4].y})
 					type: 'smooth'
 					tensionOut: serifTerminalCurve
@@ -92,13 +92,13 @@ exports.glyphs['serif-oblique-acute'] =
 				4:
 					x: anchors[0].x - serifWidth * anchors[3].scaleX * midWidth
 					y: anchors[0].y
-					typeOut: 'line'
+					type: 'smooth'
 					tensionIn: serifTerminalCurve
-					dirIn: 0
+					dirOut: 0
 				5:
 					x: anchors[1].x
 					y: anchors[0].y + serifArc * serifHeight
-					typeIn: 'line'
+					dirIn: Math.PI
 					typeOut: 'line'
 				6:
 					x: Utils.onLine({
