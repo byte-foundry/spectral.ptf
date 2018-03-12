@@ -87,6 +87,37 @@ exports.glyphs['Л_cap'] =
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
+		3:
+			skeleton: false
+			closed: true
+			nodes:
+				0:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].expandedTo[1].y
+					typeIn: 'line'
+					typeOut: 'line'
+				1:
+					x: contours[3].nodes[0].x - 10
+					y: contours[3].nodes[0].y
+					typeIn: 'line'
+					typeOut: 'line'
+				2:
+					x: contours[3].nodes[1].x - Math.min( 6, ( 6 / 80 ) * thickness * opticThickness )
+					y: contours[3].nodes[1].y - Math.min( 6, ( 6 / 80 ) * thickness * opticThickness )
+					typeIn: 'line'
+					typeOut: 'line'
+				3:
+					x: contours[3].nodes[2].x
+					y: contours[0].nodes[0].expandedTo[0].y + Math.min( 29, ( 29 / 80 ) * thickness * opticThickness )
+					typeIn: 'line'
+					dirOut: - Math.PI / 2
+					tensionOut: 1.4
+				4:
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].expandedTo[0].y
+					dirIn: Math.PI
+					tensionIn: 1.4
+					typeOut: 'line'
 	components:
 		0:
 			base: ['serif-vertical', 'none']
