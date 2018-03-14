@@ -101,9 +101,11 @@ exports.glyphs['C_cap'] =
 	components:
 		0:
 			base: ['none', 'serif-curve-inside-auto']
-			id: 'bottomtop'
+			id: 'bottombottom'
+			class: 'bottomOutsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[4].dirIn
 					baseWidth: contours[0].nodes[4].expandedTo[0]
 					baseHeight: contours[0].nodes[4].expandedTo[0]
 					noneAnchor: contours[0].nodes[4].expandedTo[0]
@@ -115,9 +117,11 @@ exports.glyphs['C_cap'] =
 					inverseOrder: true
 		1:
 			base: ['serif-curve-inside-auto', 'none']
-			id: 'bottombottom'
+			id: 'bottomtop'
+			class: 'bottomInsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[4].dirIn
 					baseWidth: contours[0].nodes[4].expandedTo[1]
 					baseHeight: contours[0].nodes[4].expandedTo[0]
 					noneAnchor: contours[0].nodes[4].expandedTo[1]
@@ -137,6 +141,7 @@ exports.glyphs['C_cap'] =
 			class: 'topInsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[1]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[1]
@@ -158,6 +163,7 @@ exports.glyphs['C_cap'] =
 			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[0]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[0]

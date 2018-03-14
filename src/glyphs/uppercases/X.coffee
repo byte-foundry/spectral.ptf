@@ -55,7 +55,7 @@ exports.glyphs['X_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: ( 65 / 80 ) * thickness * opticThickness * Math.sqrt( width )
+						width: ( 65 / 80 ) * thickness * opticThickness * contrast * Math.sqrt( width )
 						angle: 0
 						distr: 0.25
 				1:
@@ -72,7 +72,7 @@ exports.glyphs['X_cap'] =
 					)
 					typeIn: 'line'
 					expand:
-						width: ( 55 / 80 ) * thickness * opticThickness * Math.sqrt( width )
+						width: ( 55 / 80 ) * thickness * opticThickness * contrast * Math.sqrt( width )
 						angle: Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})
 						distr: 0.5
 		2:
@@ -93,7 +93,7 @@ exports.glyphs['X_cap'] =
 					)
 					typeOut: 'line'
 					expand:
-						width: ( 55 / 80 ) * thickness * opticThickness * Math.sqrt( width )
+						width: ( 55 / 80 ) * thickness * opticThickness * contrast * Math.sqrt( width )
 						angle: Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})
 						distr: 0.5
 				1:
@@ -101,7 +101,7 @@ exports.glyphs['X_cap'] =
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeIn: 'line'
 					expand:
-						width: ( 70 / 80 ) * thickness * opticThickness * Math.sqrt( width )
+						width: ( 70 / 80 ) * thickness * opticThickness * contrast * Math.sqrt( width )
 						angle: 0
 						distr: 0.25
 	components:

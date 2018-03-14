@@ -46,7 +46,7 @@ exports.glyphs['Ч_cap'] =
 					tensionIn: 1.2
 					type: 'smooth'
 					expand:
-						width: ( 63 / 80 ) * thickness * opticThickness
+						width: ( 63 / 80 ) * thickness * opticThickness * contrast 
 						angle: ( 59 / 180 ) * Math.PI
 						distr: 0.1
 				3:
@@ -60,7 +60,7 @@ exports.glyphs['Ч_cap'] =
 					        { x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y }
 					    ) + ( 15 / 180 ) * Math.PI
 					expand:
-						width: ( 51 / 80 ) * thickness * opticThickness
+						width: ( 51 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Math.PI - Math.PI / 2
 						distr: 0.5
 		1:

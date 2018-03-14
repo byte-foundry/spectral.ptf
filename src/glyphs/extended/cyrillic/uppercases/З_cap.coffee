@@ -28,7 +28,7 @@ exports.glyphs['З_cap'] =
 					        { x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y }
 					    ) - ( 25 / 180 ) * Math.PI
 					expand:
-						width: ( 80 / 80 ) * thickness * opticThickness
+						width: ( 80 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Utils.lineAngle(
 						        { x: contours[0].nodes[0].x, y: contours[0].nodes[0].y },
 						        { x: contours[0].nodes[1].x, y: contours[0].nodes[1].y }
@@ -45,7 +45,7 @@ exports.glyphs['З_cap'] =
 						distr: 0
 				2:
 					x: contours[0].nodes[0].x + 281 + 200 * width - (35)
-					y: ( 189 / 660 ) * capHeight
+					y: contours[0].nodes[1].y + ( contours[0].nodes[4].expandedTo[1].y - contours[0].nodes[1].y ) * ( 199 / 378 ) + (25/80) * thickness * opticThickness
 					dirIn: - Math.PI / 2
 					type: 'smooth'
 					expand:
@@ -87,7 +87,7 @@ exports.glyphs['З_cap'] =
 						distr: 0
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x - 35
-					y: ( 517 / 660 ) * capHeight
+					y: contours[0].nodes[4].expandedTo[0].y + ( contours[1].nodes[2].expandedTo[1].y - contours[0].nodes[4].expandedTo[0].y ) * ( 204 / 367 ) - (20/80) * thickness * opticThickness
 					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
@@ -111,7 +111,7 @@ exports.glyphs['З_cap'] =
 					        { x: contours[1].nodes[2].x, y: contours[1].nodes[2].y }
 					    ) + ( 15 / 180 ) * Math.PI
 					expand:
-						width: ( 75 / 80 ) * thickness * opticThickness
+						width: ( 75 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
 						# angle: - ( 80 / 180 ) * Math.PI
 						angle: Math.PI + Utils.lineAngle(
 						        { x: contours[1].nodes[3].x, y: contours[1].nodes[3].y },
@@ -125,6 +125,7 @@ exports.glyphs['З_cap'] =
 			class: 'bottomInsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[1]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[1]
@@ -135,8 +136,8 @@ exports.glyphs['З_cap'] =
 					left: true
 					inverseOrder: true
 			parameters:
-				serifWidth: Math.max( ( 100 / 65 ) * serifWidth, serifWidth + 35 )
-				serifHeight: Math.max( ( 60 / 50 ) * serifHeight, serifHeight + 10 )
+				serifWidth: Math.min( ( 100 / 65 ) * serifWidth, serifWidth + 35 )
+				serifHeight: Math.min( ( 60 / 50 ) * serifHeight, serifHeight + 10 )
 				serifRotate: Math.max( serifRotate, serifRotate + 0.18 )
 				serifCurve: Math.max( serifCurve, ( 10 / 80 ) * thickness )
 		1:
@@ -145,6 +146,7 @@ exports.glyphs['З_cap'] =
 			class: 'bottomOutsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[0]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[0]
@@ -160,6 +162,7 @@ exports.glyphs['З_cap'] =
 			class: 'topInsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[1].nodes[3].dirIn
 					baseWidth: contours[1].nodes[3].expandedTo[0]
 					baseHeight: contours[1].nodes[3].expandedTo[1]
 					noneAnchor: contours[1].nodes[3].expandedTo[0]
@@ -171,8 +174,8 @@ exports.glyphs['З_cap'] =
 					left: true
 					inverseOrder: true
 			parameters:
-				serifWidth: Math.max( ( 110 / 65 ) * serifWidth, serifWidth + 45 )
-				serifHeight: Math.max( ( 70 / 50 ) * serifHeight, serifHeight + 20 )
+				serifWidth: Math.min( ( 110 / 65 ) * serifWidth, serifWidth + 45 )
+				serifHeight: Math.min( ( 70 / 50 ) * serifHeight, serifHeight + 20 )
 				serifRotate: Math.max( serifRotate, serifRotate + 0.22 )
 				serifCurve: Math.max( serifCurve, ( 20 / 80 ) * thickness )
 		3:
@@ -181,6 +184,7 @@ exports.glyphs['З_cap'] =
 			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[1].nodes[3].dirIn
 					baseWidth: contours[1].nodes[3].expandedTo[1]
 					baseHeight: contours[1].nodes[3].expandedTo[1]
 					noneAnchor: contours[1].nodes[3].expandedTo[1]

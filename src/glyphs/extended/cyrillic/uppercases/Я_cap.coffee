@@ -1,26 +1,20 @@
-exports.glyphs['R_cap'] =
-	unicode: 'R'
-	glyphName: 'R'
-	characterName: 'LATIN CAPITAL LETTER R'
+exports.glyphs['Я_cap'] =
+	unicode: 'Я'
+	glyphName: 'Я'
+	characterName: 'CYRILLIC CAPITAL LETTER Я'
 	ot:
-		advanceWidth: contours[2].nodes[1].expandedTo[0].x + spacingRight
+		advanceWidth: contours[2].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX',( slant ) / 180 * Math.PI],
-		['translateX', - spacingLeft - contours[2].nodes[1].expandedTo[0].x ]
-		['scaleX', -1],
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 65 + ( 80 / 65 ) * serifWidth
-		spacingRight: 50 * spacing + ( 50 / 65 ) * serifWidth
+		spacingLeft: 50 * spacing + 35 + ( 35 / 65 ) * serifWidth
+		spacingRight: 50 * spacing + 65 + ( 80 / 65 ) * serifWidth
 	tags: [
 		'all',
-		'latin',
+		'cyrillic',
 		'uppercase'
 	]
-	anchors:
-		0:
-			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
 	contours:
 		0:
 			skeleton: true
@@ -80,7 +74,7 @@ exports.glyphs['R_cap'] =
 						angle: - Math.PI / 2
 						distr: 0
 				2:
-					x: contours[0].nodes[0].expandedTo[0].x + 47 + 32 + (24)
+					x: contours[0].nodes[0].expandedTo[0].x + 47 + (24)
 					y: contours[1].nodes[4].expandedTo[0].y + ( contours[1].nodes[0].expandedTo[0].y - contours[1].nodes[4].expandedTo[0].y ) * ( 188 / 377 )
 					dirOut: - Math.PI / 2
 					type: 'smooth'
@@ -93,7 +87,7 @@ exports.glyphs['R_cap'] =
 						contours[0].nodes[1].x,
 						contours[2].nodes[1].expandedTo[1].x
 					)
-					y: ( 302 / 660 ) * capHeight * crossbar + (41)
+					y: ( 283 / 660 ) * capHeight * crossbar + (41)
 					dirIn: Math.PI
 					typeOut: 'line'
 					expand:
