@@ -1,7 +1,7 @@
-exports.glyphs['Д_cap'] =
-	unicode: 'Д'
-	glyphName: 'Д'
-	characterName: 'CYRILLIC CAPITAL LETTER DE'
+exports.glyphs['д'] =
+	unicode: 'д'
+	glyphName: 'д'
+	characterName: 'CYRILLIC SMALL LETTER д'
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
@@ -9,11 +9,11 @@ exports.glyphs['Д_cap'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 25
-		spacingRight: 50 * spacing + 55
+		spacingRight: 50 * spacing + 45
 	tags: [
 		'all',
 		'cyrillic',
-		'uppercase'
+		'lowercase'
 	]
 	contours:
 		0:
@@ -25,15 +25,15 @@ exports.glyphs['Д_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
+						width: ( 47 / 80 ) * thickness * contrast
 						angle: ( 90 / 180 ) * Math.PI
 						distr: 0
 				1:
-					x: contours[0].nodes[0].x + 444 + 200 * width
+					x: contours[0].nodes[0].x + 268 + 200 * width
 					y: contours[0].nodes[0].y
 					typeIn: 'line'
 					expand:
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
+						width: ( 47 / 80 ) * thickness * contrast
 						angle: ( 90 / 180 ) * Math.PI
 						distr: 0
 		1:
@@ -41,29 +41,29 @@ exports.glyphs['Д_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[0].x + 25 + 50 * width + (16)
+					x: contours[0].nodes[0].x + 53 * width + (14)
 					y: contours[0].nodes[0].expandedTo[1].y
 					dirOut: Utils.lineAngle( { x: contours[1].nodes[0].expandedTo[0].x, y: contours[1].nodes[0].expandedTo[0].y },{ x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y } ) - ( 10 / 180 ) * Math.PI
 					# typeIn: 'smooth'
 					expand:
-						width: ( 64 / 80 ) * thickness * opticThickness * contrast
+						width: ( 55 / 80 ) * thickness * contrast
 						angle: 0
 						distr: 0.25
 				1:
-					x: contours[0].nodes[0].x + 100 + 50 * width + (15)
+					x: contours[0].nodes[0].x + 64 + 50 * width + (12)
 					y: contours[2].nodes[1].expandedTo[1].y - 48
 					dirIn: - ( 90 / 180 ) * Math.PI
 					typeOut: 'line'
 					expand:
-						width: ( 60 / 80 ) * thickness * opticThickness * contrast
+						width: ( 50 / 80 ) * thickness * contrast
 						angle: 0
 						distr: 0.25
 				2:
 					x: contours[1].nodes[1].expandedTo[0].x
-					y: capHeight
+					y: xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 60 / 80 ) * thickness * opticThickness * contrast
+						width: ( 50 / 80 ) * thickness * contrast
 						angle: 0
 						distr: 0
 		2:
@@ -72,18 +72,18 @@ exports.glyphs['Д_cap'] =
 			nodes:
 				0:
 					x: contours[1].nodes[1].expandedTo[0].x
-					y: capHeight
+					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
+						width: ( 47 / 80 ) * thickness * contrast
 						angle: - ( 90 / 180 ) * Math.PI
 						distr: 0
 				1:
-					x: contours[0].nodes[1].x - 94 * width - (22)
-					y: capHeight
+					x: contours[3].nodes[0].expandedTo[0].x
+					y: xHeight
 					typeIn: 'line'
 					expand:
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
+						width: ( 47 / 80 ) * thickness * contrast
 						angle: - ( 90 / 180 ) * Math.PI
 						distr: 0
 		3:
@@ -91,11 +91,11 @@ exports.glyphs['Д_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[2].nodes[1].x
+					x: contours[0].nodes[1].x - 71 * width - (20)
 					y: contours[2].nodes[1].y
 					typeOut: 'line'
 					expand:
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 80 / 80 ) * thickness
 						angle: Math.PI
 						distr: 0.25
 				1:
@@ -103,7 +103,7 @@ exports.glyphs['Д_cap'] =
 					y: contours[0].nodes[1].y
 					typeIn: 'line'
 					expand:
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 80 / 80 ) * thickness
 						angle: Math.PI
 						distr: 0.25
 	components:
@@ -121,7 +121,7 @@ exports.glyphs['Д_cap'] =
 				[ 'scaleX', -1 ]
 			)
 			parameters:
-				serifWidth: Math.min( ( 145 / 65 ) * serifWidth, serifWidth + 90 ) + 25
+				serifWidth: Math.min( ( 120 / 65 ) * serifWidth, serifWidth + 55 )
 				serifHeight: Math.min( ( 90 / 50 ) * serifHeight, serifHeight + 40 )
 				serifMedian: Math.max( 0.23 * serifMedian, serifMedian - 0.12 )
 		1:
@@ -133,7 +133,7 @@ exports.glyphs['Д_cap'] =
 					noneAnchor: contours[0].nodes[1].expandedTo[0]
 					opposite: contours[0].nodes[1].expandedTo[1]
 			parameters:
-				serifWidth: Math.min( ( 145 / 65 ) * serifWidth, serifWidth + 90 ) + 25
+				serifWidth: Math.min( ( 120 / 65 ) * serifWidth, serifWidth + 55 )
 				serifHeight: Math.min( ( 90 / 50 ) * serifHeight, serifHeight + 40 )
 				serifMedian: Math.max( 0.23 * serifMedian, serifMedian - 0.12 )
 		2:
@@ -150,9 +150,6 @@ exports.glyphs['Д_cap'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
-				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		3:
 			base: ['serif-vertical', 'none']
 			id: 'topright'
@@ -166,6 +163,3 @@ exports.glyphs['Д_cap'] =
 				[ 'scaleY', -1 ],
 				[ 'scaleX', -1 ]
 			)
-			parameters:
-				serifWidth: Math.min( ( 100 / 65 ) * serifWidth, serifWidth + 35 )
-				serifHeight: Math.min( ( 60 / 50 ) * serifHeight, serifHeight + 10 )
