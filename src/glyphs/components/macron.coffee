@@ -1,4 +1,5 @@
 exports.glyphs['macron'] =
+	global: true
 	glyphName: 'macron'
 	characterName: 'MACRON'
 	anchors:

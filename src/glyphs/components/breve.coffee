@@ -1,4 +1,5 @@
 exports.glyphs['breve'] =
+	global: true
 	glyphName: 'breve'
 	characterName: 'BREVE ACCENT'
 	anchors:

@@ -1,4 +1,5 @@
 exports.glyphs['stroke'] =
+	global: true
 	glyphName: "stroke"
 	characterName: "stroke"
 	anchors:

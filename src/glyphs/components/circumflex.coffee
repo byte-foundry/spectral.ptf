@@ -1,4 +1,5 @@
 exports.glyphs['circumflex'] =
+	global: true
 	glyphName: 'circumflex'
 	characterName: 'MODIFIER LETTER CIRCUMFLEX ACCENT'
 	anchors:

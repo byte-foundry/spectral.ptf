@@ -1,4 +1,5 @@
 exports.glyphs['ring'] =
+	global: true
 	glyphName: 'ring'
 	characterName: 'RING ABOVE'
 	anchors:

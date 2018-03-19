@@ -1,4 +1,5 @@
 exports.glyphs['dotaccent'] =
+	global: true
 	glyphName: 'dotaccent'
 	characterName: 'DOT ACCENT'
 	anchors:

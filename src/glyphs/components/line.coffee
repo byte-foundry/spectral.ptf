@@ -1,4 +1,5 @@
 exports.glyphs['line'] =
+	global: true
 	characterName: 'VERTICAL LINE'
 	anchors:
 		0:

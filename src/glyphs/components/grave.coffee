@@ -1,4 +1,5 @@
 exports.glyphs['grave'] =
+	global: true
 	glyphName: 'grave'
 	characterName: 'GRAVE ACCENT'
 	anchors:

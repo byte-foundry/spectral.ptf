@@ -1,4 +1,5 @@
 exports.glyphs['caronSlovak'] =
+	global: true
 	glyphName: 'caron slovak'
 	characterName: 'CARON SLOVAK'
 	anchors:

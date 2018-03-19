@@ -1,4 +1,5 @@
 exports.glyphs['cedilla'] =
+	global: true
 	glyphName: 'cedilla'
 	characterName: 'CEDILLA'
 	anchors:

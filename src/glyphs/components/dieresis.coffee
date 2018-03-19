@@ -1,4 +1,5 @@
 exports.glyphs['dieresis'] =
+	global: true
 	glyphName: 'dieresis'
 	characterName: 'DIAERESIS'
 	anchors:

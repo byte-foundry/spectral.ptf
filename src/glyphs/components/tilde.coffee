@@ -1,4 +1,5 @@
 exports.glyphs['tilde'] =
+	global: true
 	glyphName: 'asciitilde'
 	characterName: 'TILDE'
 	anchors:
