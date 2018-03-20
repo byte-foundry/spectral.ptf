@@ -35,6 +35,7 @@ exports.glyphs['four'] =
 					})
 					y: contours[0].nodes[2].expandedTo[0].y
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 67 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -42,7 +43,7 @@ exports.glyphs['four'] =
 				2:
 					x: contours[0].nodes[0].x + 280 + 200 * width
 					y: ( 193 / 660 ) * capHeight * crossbar + (17)
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 67 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -66,6 +67,7 @@ exports.glyphs['four'] =
 						on: [ contours[0].nodes[0].expandedTo[1], contours[1].nodes[0].expandedTo[0] ]
 					})
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 85 / 80 ) * thickness * opticThickness
 						angle: 0
@@ -73,7 +75,7 @@ exports.glyphs['four'] =
 				2:
 					x: contours[0].nodes[0].x + ( contours[0].nodes[2].x - contours[0].nodes[0].x ) * ( 340 / 480 )
 					y: 0 + Math.max( 0, serifHeight * serifArc )
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 85 / 80 ) * thickness * opticThickness
 						angle: 0
@@ -94,6 +96,7 @@ exports.glyphs['four'] =
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: Utils.lineAngle({x: contours[0].nodes[0].expandedTo[1].x, y: contours[0].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[0].expandedTo[0].x, y: contours[1].nodes[0].expandedTo[0].y}) - Math.PI / 2

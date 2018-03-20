@@ -105,6 +105,7 @@ exports.glyphs['Z_cap'] =
 				1:
 					x: contours[1].nodes[1].expandedTo[1].x
 					y: contours[1].nodes[1].expandedTo[1].y
+					typeIn: 'line'
 					expand:
 						width: ( 80 / 80 ) * thickness * opticThickness
 						angle: Math.max(

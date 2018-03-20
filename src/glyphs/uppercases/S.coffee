@@ -154,6 +154,7 @@ exports.glyphs['S_cap'] =
 			class: 'topOutsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[6].dirIn
 					baseWidth: contours[0].nodes[6].expandedTo[1]
 					baseHeight: contours[0].nodes[6].expandedTo[1]
 					noneAnchor: contours[0].nodes[6].expandedTo[1]
@@ -167,6 +168,7 @@ exports.glyphs['S_cap'] =
 			class: 'topInsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[6].dirIn
 					baseWidth: contours[0].nodes[6].expandedTo[0]
 					baseHeight: contours[0].nodes[6].expandedTo[1]
 					noneAnchor: contours[0].nodes[6].expandedTo[0]
@@ -188,6 +190,7 @@ exports.glyphs['S_cap'] =
 			class: 'bottomOutsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[0]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[0]
@@ -203,6 +206,7 @@ exports.glyphs['S_cap'] =
 			class: 'bottomInsideCurve'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[1]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[1]
