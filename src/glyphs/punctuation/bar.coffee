@@ -31,7 +31,7 @@ exports.glyphs['bar'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: ascenderHeight + overshoot
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 50 / 80 ) * thickness
 						angle: 0
