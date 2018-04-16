@@ -3,7 +3,7 @@ exports.glyphs['ц'] =
 	glyphName: 'ц'
 	characterName: 'CYRILLIC SMALL LETTER ц'
 	ot:
-		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
+		advanceWidth: contours[2].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX',( slant ) / 180 * Math.PI]
 	)

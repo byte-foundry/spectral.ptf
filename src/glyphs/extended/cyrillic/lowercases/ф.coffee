@@ -48,7 +48,7 @@ exports.glyphs['ф'] =
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 374 + 200 * width - (25),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 92 / 80 ) * thickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 92 / 80 ) * thickness + thickness + 30 * 2
 					)
 					y: contours[0].nodes[0].y
 					dirOut:( - 90 ) / 180 * Math.PI

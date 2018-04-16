@@ -34,6 +34,7 @@ exports.glyphs['four'] =
 						on: [ contours[0].nodes[0].expandedTo[1], contours[1].nodes[2].expandedTo[1] ]
 					})
 					y: contours[0].nodes[2].expandedTo[0].y
+					typeIn: 'line'
 					typeOut: 'line'
 					expand:
 						width: ( 67 / 80 ) * thickness * opticThickness * contrast
@@ -42,7 +43,7 @@ exports.glyphs['four'] =
 				2:
 					x: contours[0].nodes[0].x + 280 + 200 * width
 					y: ( 193 / 660 ) * capHeight * crossbar + (17)
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 67 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -65,6 +66,7 @@ exports.glyphs['four'] =
 						x: contours[1].nodes[2].expandedTo[0].x
 						on: [ contours[0].nodes[0].expandedTo[1], contours[1].nodes[0].expandedTo[0] ]
 					})
+					typeIn: 'line'
 					typeOut: 'line'
 					expand:
 						width: ( 85 / 80 ) * thickness * opticThickness

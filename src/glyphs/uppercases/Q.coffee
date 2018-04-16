@@ -72,7 +72,7 @@ exports.glyphs['Q_cap'] =
 				0:
 					x: contours[1].nodes[1].x + ( 65 / 80 ) * thickness * opticThickness + (20)
 					y: contours[1].nodes[1].expandedTo[1].y
-					dirOut:( - 150 ) / 180 * Math.PI
+					dirOut: ( - 150 ) / 180 * Math.PI
 					expand:
 						width: ( 15 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -89,8 +89,10 @@ exports.glyphs['Q_cap'] =
 				2:
 					x: contours[0].nodes[3].x
 					y: contours[0].nodes[3].expandedTo[0].y + ( contours[0].nodes[3].expandedTo[1].y - contours[0].nodes[3].expandedTo[0].y ) * 0.5
-					dirIn: Math.max( - 90,( ( 45 / 250 ) * descender ) ) / 180 * Math.PI
-					type: 'smooth'
+					dirIn: Utils.lineAngle(
+					        { x: contours[1].nodes[2].expandedTo[0].x, y: contours[1].nodes[2].expandedTo[0].y },
+					        { x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y }
+					    ) - ( 25 / 180 ) * Math.PI
 					expand:
 						width: Math.min( thickness * opticThickness * contrast + 55, ( 135 / 80 ) * thickness * opticThickness * contrast )
 						angle: 0

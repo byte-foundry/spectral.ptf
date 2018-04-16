@@ -33,7 +33,10 @@ exports.glyphs['caronSlovak'] =
 					typeOut: 'line'
 					expand:
 						width: ( (Math.max( 91 * contrast, 75 )) / 80 ) * thickness
-						angle: 180 - Math.max( 46 * contrast,( 0 ) ) / 180 * Math.PI
+						angle: Utils.lineAngle(
+						        { x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y },
+						        { x: contours[0].nodes[0].expandedTo[0].x, y: contours[0].nodes[0].expandedTo[0].y }
+						    ) * ( 4 / 5 ) + Math.PI / 2
 						distr: 1
 				2:
 					x: contours[0].nodes[0].expandedTo[1].x - 21 * width

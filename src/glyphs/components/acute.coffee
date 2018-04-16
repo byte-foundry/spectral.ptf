@@ -33,7 +33,10 @@ exports.glyphs['acute'] =
 					typeOut: 'smooth'
 					expand:
 						width: ( 80 / 80 ) * thickness
-						angle: - Math.max( 50 * contrast,( 0 ) ) / 180 * Math.PI
+						angle: Math.PI + Utils.lineAngle(
+						        { x: contours[0].nodes[0].expandedTo[0].x, y: contours[0].nodes[0].expandedTo[0].y },
+						        { x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y }
+						    ) * ( 4 / 5 ) + Math.PI / 2
 						distr: 0
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + 87 * width
