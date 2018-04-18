@@ -6,8 +6,8 @@ exports.glyphs['exclamdown'] =
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['translateY', - xHeight]
-		['skewX',( slant ) / 180 * Math.PI],
 		['scaleY', -1],
+		['skewX',( slant ) / 180 * Math.PI],
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 65
