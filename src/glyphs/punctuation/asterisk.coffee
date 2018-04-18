@@ -4,9 +4,6 @@ exports.glyphs['asterisk'] =
 	characterName: 'ASTERISK'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + 145 + (( 60 / 80 ) * thickness) / 2 + spacingRight
-	transforms: Array(
-		['skewX',( slant ) / 180 * Math.PI]
-	)
 	tags: [
 		'all',
 		'latin',
