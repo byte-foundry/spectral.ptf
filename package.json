@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "karma": "^2.0.0",
-    "prototypo-precursor": "^1.0.4"
+    "prototypo-precursor": "^1.0.4",
+    "yargs": "^11.0.0"
   }
 }

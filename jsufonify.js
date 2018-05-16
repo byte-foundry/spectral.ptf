@@ -98,16 +98,18 @@ function addComponents( glyph ) {
 function linkToRelatedGlyphs(glyph, glyphsByName) {
 	var base = glyphsByName[glyph.base];
 
-	base.relatedGlyphs = base.relatedGlyphs || [];
-	glyph.relatedGlyphs = glyph.relatedGlyphs || [];
+	if (base) {
+		base.relatedGlyphs = base.relatedGlyphs || [];
+		glyph.relatedGlyphs = glyph.relatedGlyphs || [];
 
-	base.relatedGlyphs.forEach(function(name) {
-		glyphsByName[name].relatedGlyphs = glyphsByName[name].relatedGlyphs || [];
-		glyphsByName[name].relatedGlyphs.push(glyph.name);
-	});
-	glyph.relatedGlyphs = glyph.relatedGlyphs.concat(base.name, base.relatedGlyphs);
+		base.relatedGlyphs.forEach(function(name) {
+			glyphsByName[name].relatedGlyphs = glyphsByName[name].relatedGlyphs || [];
+			glyphsByName[name].relatedGlyphs.push(glyph.name);
+		});
+		glyph.relatedGlyphs = glyph.relatedGlyphs.concat(base.name, base.relatedGlyphs);
 
-	base.relatedGlyphs.push(glyph.name);
+		base.relatedGlyphs.push(glyph.name);
+	}
 }
 
 function relatedGlyphsToUnicode(glyph, glyphsByName) {
@@ -125,8 +127,7 @@ function relatedGlyphsToUnicode(glyph, glyphsByName) {
 }
 
 // plugin level function (dealing with files)
-function jsufonify(/*prefixText*/free) {
-
+function jsufonify(/*prefixText*/free, subset) {
 	// creating a stream through which each file will pass
 	var stream = through.obj(function(file, enc, cb) {
 		var sandbox = { exports: { glyphs: {} } },
@@ -157,6 +158,32 @@ function jsufonify(/*prefixText*/free) {
 				return glyph.unicode === undefined ||
 					(glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
 					(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
+			});
+			font.glyphs = _.pickBy(font.glyphs, glyph => glyph);
+		} else if (subset) {
+			const unicodeSubset = subset.split('').map(item => item.charCodeAt(0));
+			font.glyphs = _.mapValues(font.glyphs, (glyph) => {
+				const unicode = glyph.unicode === undefined || typeof glyph.unicode === 'number' ? glyph.unicode : glyph.unicode.charCodeAt(0);
+				if (unicode === undefined || unicodeSubset.indexOf(unicode) !== -1) {
+					_.forEach(glyph.components, (comp) => {
+						let base;
+						if (typeof comp.base === 'string') {
+							base = [comp.base];
+						}
+						else {
+							base = comp.base;
+						}
+						base.forEach((baseToLookup) => {
+							const unicode = font.glyphs[baseToLookup].unicode;
+							if (unicode) {
+								unicodeSubset.push(unicode);
+							}
+						});
+					});
+				}
+				return unicode === undefined ||  unicodeSubset.indexOf(unicode) !== -1 ?
+					glyph :
+					undefined;
 			});
 			font.glyphs = _.pickBy(font.glyphs, glyph => glyph);
 		}
@@ -262,19 +289,21 @@ function jsufonify(/*prefixText*/free) {
 			// we'll save the diacritics sourcs, replace it with the base glyph
 			// source and then restore/merge the properties we're interested in
 			var glyph = _.cloneDeep( altMap[ _glyph.base ], true );
+			if (glyph) {
 
-			glyph.name = _glyph.name;
-			glyph.base = _glyph.base;
-			glyph.unicode = _glyph.unicode;
-			glyph.tags = _glyph.tags;
-			glyph.glyphName = _glyph.glyphName;
-			glyph.characterName = _glyph.characterName;
-			// merge all parameters (diacritic will overwrite base parameters)
-			_.assign( glyph.parameter, _glyph.parameter );
-			// merge the two array of components
-			[].push.apply(glyph.outline.component, _glyph.outline.component );
+				glyph.name = _glyph.name;
+				glyph.base = _glyph.base;
+				glyph.unicode = _glyph.unicode;
+				glyph.tags = _glyph.tags;
+				glyph.glyphName = _glyph.glyphName;
+				glyph.characterName = _glyph.characterName;
+				// merge all parameters (diacritic will overwrite base parameters)
+				_.assign( glyph.parameter, _glyph.parameter );
+				// merge the two array of components
+				[].push.apply(glyph.outline.component, _glyph.outline.component );
 
-			font.glyphs[_glyph.name] = glyph;
+				font.glyphs[_glyph.name] = glyph;
+			}
 		});
 
 		file.contents = new Buffer( JSON.stringify( sandbox.exports ) );
