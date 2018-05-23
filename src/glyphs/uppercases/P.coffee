@@ -48,7 +48,11 @@ exports.glyphs['P_cap'] =
 						angle:( - 90 ) / 180 * Math.PI
 						distr: 0
 				1:
-					x: contours[1].nodes[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 145 / 367 )
+					# x: contours[1].nodes[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 145 / 367 )
+					x: Math.max(
+						contours[1].nodes[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 145 / 367 ),
+						contours[1].nodes[0].expandedTo[1].x
+					)
 					y: contours[0].nodes[1].y
 					dirOut: 0
 					expand:
@@ -57,8 +61,8 @@ exports.glyphs['P_cap'] =
 						distr: 0
 				2:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 240 + 200 * width - (23),
-						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 97 / 80 ) * thickness * opticThickness
+						contours[0].nodes[0].expandedTo[0].x + 205 + 200 * width - (45),
+						contours[0].nodes[0].expandedTo[1].x + 0.5 * ( 98 / 80 ) * thickness * opticThickness + 50
 					)
 					y: contours[1].nodes[4].expandedTo[0].y + ( contours[1].nodes[0].expandedTo[0].y - contours[1].nodes[4].expandedTo[0].y ) * ( 190 / 370 ) - (5)
 					dirIn: Math.PI / 2
@@ -66,7 +70,7 @@ exports.glyphs['P_cap'] =
 					expand:
 						width: ( 97 / 80 ) * thickness * opticThickness
 						angle:( - 175 ) / 180 * Math.PI
-						distr: 0.25
+						distr: 0.5
 				3:
 					x: contours[1].nodes[1].expandedTo[0].x - 25
 					y: contours[1].nodes[4].expandedTo[0].y
