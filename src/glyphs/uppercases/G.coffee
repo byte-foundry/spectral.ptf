@@ -86,7 +86,7 @@ exports.glyphs['G_cap'] =
 					)
 					typeOut: 'smooth'
 					expand:
-						width: ( 62 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 35 / 80 ) * thickness * opticThickness + ( 27 / 80 ) * thickness * opticThickness  * contrast * contrastExtremity
 						angle: Math.max(
 							Math.min(
 								170 + ( 50 * aperture * apertureBottom - 50 ),
@@ -104,12 +104,13 @@ exports.glyphs['G_cap'] =
 					y: contours[0].nodes[4].expandedTo[0].y
 					typeOut: 'line'
 					expand:
-						width: (90 / 80) * thickness * opticThickness / Math.cos (Math.PI + Utils.lineAngle({x: contours[0].nodes[4].expandedTo[0].x, y: contours[0].nodes[4].expandedTo[0].y}, {x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}))
-						angle: Utils.lineAngle({x: contours[0].nodes[4].expandedTo[0].x, y: contours[0].nodes[4].expandedTo[0].y}, {x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y})
+						width: ((90 / 80) * thickness * opticThickness / Math.cos (Math.PI + Utils.lineAngle({x: contours[0].nodes[4].expandedTo[0].x, y: contours[0].nodes[4].expandedTo[0].y}, {x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}))) + 2 * (-contrastExtremity / 0.8 + 1 / 0.8) + 11 * (-contrast / 0.85 + 1 / 0.85) - 1 * (-contrast / 0.85 + 1 / 0.85) * (-contrastExtremity / 0.8 + 1 / 0.8) - 4 * (-contrast / 0.85 + 1 / 0.85) * (thickness - 80) / 90
+						angle: Utils.lineAngle({x: contours[0].nodes[4].expandedTo[0].x, y: contours[0].nodes[4].expandedTo[0].y}, {x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y}) + 7 * Math.PI / 180 * (-contrastExtremity / 0.8 + 1 / 0.8) + 14 * Math.PI / 180 * (-contrast / 0.85 + 1 / 0.85) - 6 * Math.PI / 180 * (-contrast / 0.85 + 1 / 0.85) * (-contrastExtremity / 0.8 + 1 / 0.8) - 8 * Math.PI / 180 * (-contrast / 0.85 + 1 / 0.85) * (thickness - 80) / 90
 						distr: 0
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: ( 290 / 660 ) * capHeight * crossbar
+					typeIn: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: Math.PI
@@ -120,6 +121,7 @@ exports.glyphs['G_cap'] =
 			id: 'topbottom'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[1]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[1]
@@ -140,6 +142,7 @@ exports.glyphs['G_cap'] =
 			id: 'toptop'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[0].dirOut
 					baseWidth: contours[0].nodes[0].expandedTo[0]
 					baseHeight: contours[0].nodes[0].expandedTo[0]
 					noneAnchor: contours[0].nodes[0].expandedTo[0]
