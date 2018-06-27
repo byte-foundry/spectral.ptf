@@ -65,7 +65,7 @@ exports.glyphs['R_cap'] =
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 205 + 200 * width - (45),
-						contours[0].nodes[0].expandedTo[1].x + 0.5 * ( 98 / 80 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.5 * ( 98 / 80 ) * thickness * opticThickness + 50
 					)
 					y: contours[1].nodes[4].expandedTo[0].y + ( contours[1].nodes[0].expandedTo[0].y - contours[1].nodes[4].expandedTo[0].y ) * ( 190 / 370 ) - (5)
 					dirIn: Math.PI / 2
@@ -75,18 +75,17 @@ exports.glyphs['R_cap'] =
 						angle:( - 175 ) / 180 * Math.PI
 						distr: 0.5
 				3:
-					x: contours[1].nodes[1].expandedTo[0].x - 15
+					x: contours[1].nodes[1].expandedTo[0].x - 25
 					y: contours[1].nodes[4].expandedTo[0].y
 					dirIn: 0
 					typeOut: 'line'
-					tensionIn: 0.7
 					expand:
-						width: ( 64 / 80 ) * thickness * opticThickness * contrast
-						angle: Math.PI / 2 + Math.acos( (( 55 / 80 ) * thickness * opticThickness * contrast) / (( 64 / 80 ) * thickness * opticThickness * contrast))
+						width: ( 58 / 80 ) * thickness * opticThickness * contrast
+						angle:( 70 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[0].nodes[1].expandedTo[1].x - ( 25 / 80 ) * thickness * opticThickness
-					y: ( 330 / 660 ) * capHeight * crossbar
+					y: ( 290 / 660 ) * capHeight * crossbar + (27)
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -113,7 +112,7 @@ exports.glyphs['R_cap'] =
 				1:
 					x: contours[1].nodes[2].expandedTo[1].x + (65)
 					y: Math.max( 0, serifHeight * serifArc )
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ((90 / 80) * thickness) / Math.sin(Math.PI - Utils.lineAngle({x: contours[2].nodes[1].x, y: contours[2].nodes[1].y}, {x: contours[2].nodes[0].x, y: contours[2].nodes[0].y}))
 						angle: Math.PI
