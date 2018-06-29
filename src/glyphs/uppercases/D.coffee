@@ -35,6 +35,7 @@ exports.glyphs['D_cap'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0
@@ -55,8 +56,9 @@ exports.glyphs['D_cap'] =
 					x: contours[1].nodes[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 175 / 600 )
 					y: contours[0].nodes[1].y
 					dirOut: 0
+					typeIn: 'smooth'
 					expand:
-						width: ( 60 / 80 ) * thickness * opticThickness * contrast
+						width: ( 61 / 80 ) * thickness * opticThickness * contrast
 						angle:( - 115 ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -66,7 +68,7 @@ exports.glyphs['D_cap'] =
 					)
 					y: contours[1].nodes[4].expandedTo[0].y + ( contours[1].nodes[0].expandedTo[0].y - contours[1].nodes[4].expandedTo[0].y ) * ( 360 / 660 ) - (9)
 					dirIn: Math.PI / 2
-					type: 'smooth'
+					typeOut: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
@@ -76,6 +78,7 @@ exports.glyphs['D_cap'] =
 				3:
 					x: contours[1].nodes[4].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 140 / 495 )
 					y: 0
+					typeIn: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
@@ -84,6 +87,7 @@ exports.glyphs['D_cap'] =
 				4:
 					x: contours[0].nodes[1].expandedTo[1].x - ( 25 / 80 ) * thickness * opticThickness
 					y: contours[0].nodes[0].y
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2

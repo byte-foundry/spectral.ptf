@@ -35,6 +35,7 @@ exports.glyphs['m'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[1].nodes[3].expandedTo[1].y + overshoot
+					typeIn: 'line'
 					expand:
 						width: thickness
 						angle: 0

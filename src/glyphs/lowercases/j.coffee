@@ -32,7 +32,7 @@ exports.glyphs['j'] =
 				1:
 					x: spacingLeft + (40/80) * thickness
 					y: 0 - (6)
-					type: 'smooth'
+					typeIn: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: ( 80.6 / 80 ) * thickness
@@ -41,6 +41,7 @@ exports.glyphs['j'] =
 				2:
 					x: contours[0].nodes[1].x
 					y: xHeight + overshoot - Math.max( 0, serifHeight * serifArc ) - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) )
+					typeIn: 'line'
 					expand:
 						width: thickness
 						angle: 0

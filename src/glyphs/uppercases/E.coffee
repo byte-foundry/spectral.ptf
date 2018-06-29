@@ -35,6 +35,7 @@ exports.glyphs['E_cap'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0
@@ -54,6 +55,7 @@ exports.glyphs['E_cap'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 210 + 200 * width + Math.max( 0, ( 20 / 80 ) * thickness - 20 )
 					y: contours[1].nodes[0].expandedTo[0].y
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
@@ -73,6 +75,7 @@ exports.glyphs['E_cap'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 125 + 200 * width + Math.max( 0, ( 20 / 80 ) * thickness - 20 )
 					y: contours[2].nodes[0].y
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle:( - 90 ) / 180 * Math.PI
@@ -84,6 +87,7 @@ exports.glyphs['E_cap'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x + 235 + 200 * width + Math.max( 0, ( 20 / 80 ) * thickness - 20 )
 					y: contours[3].nodes[1].expandedTo[0].y
+					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -91,7 +95,7 @@ exports.glyphs['E_cap'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Math.PI / 2

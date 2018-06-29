@@ -36,6 +36,7 @@ exports.glyphs['A_cap'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( ( contours[1].nodes[1].expandedTo[1].x + ( contours[1].nodes[1].expandedTo[0].x - contours[1].nodes[1].expandedTo[1].x ) * 0.5 ) - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: capHeight + overshoot / 2
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Utils.lineAngle({x: contours[0].nodes[0].expandedTo[0].x, y: contours[0].nodes[0].expandedTo[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}) - Math.PI / 2
@@ -60,7 +61,7 @@ exports.glyphs['A_cap'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 396 + 200 * width - (27)
 					y: Math.max( 0, serifHeight * serifArc )
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 94 / 80 ) * thickness * opticThickness
 						angle: Math.PI
@@ -113,7 +114,7 @@ exports.glyphs['A_cap'] =
 						on: [ contours[0].nodes[0].expandedTo[1], contours[0].nodes[1].expandedTo[1] ]
 					})
 					y: contours[3].nodes[0].y
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2

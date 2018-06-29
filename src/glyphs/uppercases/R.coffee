@@ -35,6 +35,7 @@ exports.glyphs['R_cap'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0
@@ -59,7 +60,7 @@ exports.glyphs['R_cap'] =
 					y: contours[0].nodes[1].y
 					dirOut: 0
 					expand:
-						width: ( 60 / 80 ) * thickness * opticThickness * contrast
+						width: ( 59 / 80 ) * thickness * opticThickness * contrast
 						angle:( - 112 ) / 180 * Math.PI
 						distr: 0
 				2:
@@ -86,6 +87,7 @@ exports.glyphs['R_cap'] =
 				4:
 					x: contours[0].nodes[1].expandedTo[1].x - ( 25 / 80 ) * thickness * opticThickness
 					y: ( 290 / 660 ) * capHeight * crossbar + (27)
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2

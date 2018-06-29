@@ -43,6 +43,7 @@ exports.glyphs['d'] =
 						( 60 / 450 ) * xHeight
 					)
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: thickness
 						angle: 0
@@ -50,6 +51,7 @@ exports.glyphs['d'] =
 				2:
 					x: contours[0].nodes[1].x
 					y: ascenderHeight + overshoot - Math.max( 0, serifHeight * serifArc ) - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) )
+					typeIn: 'line'
 					expand:
 						width: thickness
 						angle: 0

@@ -36,6 +36,7 @@ exports.glyphs['J_cap'] =
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: Math.max( 50, Math.max( 50 * width, ( 50 / 660 ) * capHeight ))
 					dirOut:( - 90 ) / 180 * Math.PI
+					typeIn: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness / Math.cos( ( Math.min( 65, 90 - 25 / 80 * thickness * opticThickness )) / 180 * Math.PI )
 						angle: ( Math.min( 65,( 90 - 25 / 80 * thickness * opticThickness )) ) / 180 * Math.PI

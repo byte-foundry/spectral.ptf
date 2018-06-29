@@ -30,7 +30,7 @@ exports.glyphs['numbersign'] =
 						),
 						capHeight - xHeight
 					)
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 47 / 80 ) * thickness
 						angle: Math.PI / 2
@@ -38,7 +38,7 @@ exports.glyphs['numbersign'] =
 				0:
 					x: contours[0].nodes[1].x + 200 * width + 240
 					y: contours[0].nodes[1].y
-					typeIn: 'line'
+					typeOut: 'line'
 					expand:
 						width: ( 47 / 80 ) * thickness
 						angle: Math.PI / 2

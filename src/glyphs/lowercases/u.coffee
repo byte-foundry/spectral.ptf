@@ -76,6 +76,7 @@ exports.glyphs['u'] =
 				1:
 					x: contours[1].nodes[0].x
 					y: Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: thickness
 						angle: 0

@@ -35,6 +35,7 @@ exports.glyphs['H_cap'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0
@@ -57,6 +58,7 @@ exports.glyphs['H_cap'] =
 				1:
 					x: contours[1].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0
@@ -68,6 +70,7 @@ exports.glyphs['H_cap'] =
 				0:
 					x: contours[1].nodes[0].x
 					y: contours[2].nodes[1].y
+					typeOut: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2
@@ -75,7 +78,7 @@ exports.glyphs['H_cap'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 340 / 660 ) * capHeight * crossbar
-					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 55 / 80 ) * thickness * opticThickness * contrast
 						angle: Math.PI / 2

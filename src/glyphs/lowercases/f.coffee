@@ -31,6 +31,7 @@ exports.glyphs['f'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: xHeight + ( 40 / 300 ) * ascender
+					typeIn: 'line'
 					dirOut: Math.PI / 2
 					tensionOut: 0.8
 					expand:
