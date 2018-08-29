@@ -1,7 +1,7 @@
 exports.glyphs['Ъ_cap'] =
 	unicode: 'Ъ'
 	glyphName: 'Ъ'
-	characterName: 'CYRILLIC CAPITAL LETTER Ъ'
+	characterName: 'CYRILLIC CAPITAL LETTER HARD SIGN'
 	ot:
 		advanceWidth: contours[2].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(

@@ -46,14 +46,14 @@ exports.glyphs['Ч_cap'] =
 					tensionIn: 1.2
 					type: 'smooth'
 					expand:
-						width: ( 63 / 80 ) * thickness * opticThickness * contrast 
+						width: ( 63 / 80 ) * thickness * opticThickness * contrast
 						angle: ( 59 / 180 ) * Math.PI
 						distr: 0.1
 				3:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: Math.max(
 						( 303 / 660 ) * capHeight + (25),
-						contours[0].nodes[2].y + ( 51 / 80 ) * thickness * opticThickness / 2 + 27
+						contours[0].nodes[2].y + ( 51 / 80 ) * thickness * contrast * contrastExtremity * opticThickness / 2 + 27
 					)
 					dirIn: Utils.lineAngle(
 					        { x: contours[0].nodes[3].expandedTo[1].x, y: contours[0].nodes[3].expandedTo[1].y },
